@@ -3,14 +3,14 @@
 \usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
 \usepackage{xcolor}
 \usepackage{eso-pic}
+\usepackage{fontenc}
+\usepackage{hyperref}
+\usepackage[default]{opensans}
 
-\usepackage[scaled]{helvet}
-\renewcommand\familydefault{\sfdefault} 
-\usepackage[T1]{fontenc}
+\hypersetup{hidelinks}
+\definecolor{primary}{RGB}{38, 38, 38}
 
-\definecolor{lightblue}{RGB}{207, 215, 250}
-
-\pagecolor{lightblue}
+\pagecolor{primary}
 \AddToShipoutPictureBG{%
   \AtPageLowerLeft{%
     \color{white}%
@@ -19,30 +19,37 @@
 }%
 
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Matthew Polak}
+\color{white} \name{Matthew Polak}
 \address{+1 (519) 362-9413 \\ Ontario, Canada}
-\address{\href{mailto:me@matteopolak.com}{me@matteopolak.com} \\ \href{https://matteopolak.com}{matteopolak.com} \\ \href{https://github.com/matteopolak}{github.com/matteopolak} \\ \href{https://linkedin.com/in/matteo-polak}{linkedin.com/in/matteo-polak}\vspace{3.5em}}
+\address{\href{mailto:me@matteopolak.com}{me@matteopolak.com} \\ \href{https://matteopolak.com}{matteopolak.com} \\ \href{https://github.com/matteopolak}{github.com/matteopolak}\vspace{3.5em}}
 
 \begin{document}
+\color{primary}
 
-% START Education section
+% Education section
 \begin{rSection}{EDUCATION}
 	{\textbf{Honours Bachelor of Computer Science}}, University of Ottawa \hfill {Expected 2026}
 \end{rSection}
-% END Education section
 
-% START Skills section
+% Skills section
 \begin{rSection}{SKILLS}
-
 	\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} p{40em} l }
 		Technical Skills & C++, Rust, Java, Node.js, Python, TypeScript, PostgreSQL, MySQL, MariaDB, MongoDB, Firebase, Svelte, React, Flutter, TensorFlow, PyTorch, Pandas, NumPy, AWS \\
 		Soft Skills      & Communication, Teamwork, Adaptability, Patience, Critical Thinking, Time Management, Accountability                                                          \\
 	\end{tabular}
 \end{rSection}
-% END Skills section
 
-% START Experience section
+% Experience section
 \begin{rSection}{PROFESSIONAL EXPERIENCE}
+	\textbf{Software Developer} \hfill May 2023 - Sept 2023 \\ Ciena \hfill \textit{Ottawa, ON}
+
+	\begin{itemize}
+		\itemsep -3pt {}
+		\item Streamlined the development of the 6500 Packet-Optical Platform by 20\% using \textbf{Python}.
+		\item Developed new features with \textbf{C++} and \textbf{Groovy} to improve the performance by 10\%.
+		\item Achieved a 15\% faster development cycle by improving the build pipeline.
+	\end{itemize}
+
 	\textbf{STEM Instructor} \hfill Jun 2022 - Oct 2022 \\ RoboEDU \hfill \textit{North York, ON}
 
 	\begin{itemize}
@@ -52,36 +59,29 @@
 		\item Achieved a 15\% higher average rating using interpersonal skills and technological knowledge.
 	\end{itemize}
 \end{rSection}
-% END Experience section
 
-% START Projects section
+% Projects section
 \begin{rSection}{PROJECTS}
 	\vspace{-1.25em}
 
 	\item \textbf{Remote Message Archiving Tool:} {Built a multi-threaded tool to download all chat messages from specified Twitch videos by using \textbf{Rust}, \textbf{PostgreSQL}, and \textbf{Prisma}. It can archive 5,000,000+ messages per hour depending on network speed. Releases are automatically created and binaries are automatically built for MacOS, Linux, and Windows when a tag is pushed, improving iteration time by over 50\%.}
 
-	\item \textbf{Stock Market Predictor:} {Built a \textbf{neural network} that analyzes historical time-series data and predicts the price of the stock for the following day. Created with \textbf{TypeScript} and \textbf{TensorFlow}.}
-
-	\item \textbf{Modular Framework for Discord:} {Built a library to easily handle the creation of commands and events using \textbf{TypeScript} and the Discord \textbf{REST API} and published it to the \textbf{Node Package Manager}. It has over 200 weekly downloads and includes automatically generated documentation using \textbf{GitHub Actions}.}
+	\item \textbf{Discord Music Player:} {Built a bot with \textbf{TypeScript}, \textbf{Prisma}, and the \textbf{Discord API} that hosts listen-along sessions for users, with an extensive feature-set with persistent queues managed by \textbf{MongoDB}, audio filters with \textbf{FFmpeg}, and much more.}
 
 	\item \textbf{Personal Website:} {Created a personal portfolio website with \textbf{TypeScript}, \textbf{Svelte}, and \textbf{Vite}. It is automatically deployed and hosted on \textbf{Cloudflare Pages}, serving over 5,000 requests per month.}
 
-	\item \textbf{Password Generator Tool:} {Built a cryptographically-secure password generator using \textbf{clap} and \textbf{rand} with \textbf{Rust} that can generate over 4,000,000 secure passwords per second. It is a command-line tool with arguments to change the character set, length, and number of passwords to generate.}
+	\item \textbf{Minecraft Name Index:} {Built a \textbf{SvelteKit} website with a \textbf{Rust} backend that indexes all Minecraft usernames and allows users to search for them. It is hosted on \textbf{Cloudflare Pages} and uses \textbf{PostgreSQL} for data storage.}
 
 	\item \textbf{Chat Message Generation Model:} {Built a \textbf{recurrent neural network} that generates chat messages based on a dataset of username and chat message pairs. Uses \textbf{Pandas} for CSV parsing, \textbf{TensorFlow} for model training, \textbf{NumPy} for data input/output, and \textbf{argparse} for command-line argument parsing.}
 
-	\item \textbf{Algorithm Repository:} {Created a monorepo containing a collection of common algorithms using \textbf{C++}. Code formatting is checked on commit using \textbf{clang-format} with \textbf{GitHub Actions}.}
-
 \end{rSection}
-% END Projects section
 
-% START Extra-curricular activites section
+% Extra-curricular section
 \begin{rSection}{Extra-Curricular Activities}
 	\begin{itemize}
-		\item 	Actively participate in hackathons and cybersecurity competitions; CyberTitan National Finalist 2022, Cyber Defender Award 2021.
-		\item	Compete in coding competitions and received first place in the 2022 Skills Ontario Coding Competition.
+		\item	Compete in hackathons, 2023 Hack the Hill winner.
+		\item	Compete in coding competitions, 2022 Skills Ontario Coding Competition winner.
 	\end{itemize}
 \end{rSection}
-% END Extra-curricular activites section
 
 \end{document}
