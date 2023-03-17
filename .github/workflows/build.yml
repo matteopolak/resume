@@ -15,8 +15,11 @@ jobs:
       - uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+      - name: Upload PDF to latest release
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: PDF
-          path: resume.pdf
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: resume.pdf
+          asset_name: MatthewPolakResume.pdf
+          tag: latest
+          overwrite: true
