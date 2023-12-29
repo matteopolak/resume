@@ -1,4 +1,5 @@
 # My Resume
-![Build Status](https://github.com/matteopolak/resume/actions/workflows/build.yml/badge.svg)
+
+[![build status](https://github.com/matteopolak/resume/actions/workflows/build.yml/badge.svg)](.github/workflows/build.yml)
 
 My resume, built with LaTeX.

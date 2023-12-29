@@ -21,48 +21,63 @@
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \color{white} \name{Matthew Polak}
 \address{+1 (519) 362-9413 \\ Ontario, Canada}
-\address{\underline{\href{mailto:me@matteopolak.com}{me@matteopolak.com}} \\ \underline{\href{https://matteopolak.com}{matteopolak.com}} \\ \underline{\href{https://github.com/matteopolak}{github.com/matteopolak}}\vspace{3.5em}}
+\address{\underline{\href{mailto:me@matteopolak.com}{me@matteopolak.com}} \\ \underline{\href{https://matteopolak.com}{matteopolak.com}} \\ \underline{\href{https://github.com/matteopolak}{github.com/matteopolak}} \\ \underline{\href{https://linkedin.com/in/matteo-polak}{linkedin.com/in/matteo-polak}}\vspace{3.5em}}
 
 \begin{document}
 \color{primary}
 
 \vspace{-8pt}
 
-% Education section
-\begin{rSection}{EDUCATION}
-	{\textbf{Co-op Honours Bachelor of Computer Science}}, University of Ottawa \hfill \textit{Expected 2026}
-	\vspace{-8pt}
-	\begin{flushright}
-		{Looking for a \textbf{May 2024}, 4-month position}
-	\end{flushright}
-\end{rSection}
+\sectionskip
+\MakeUppercase{{\bf Education}}
+\vspace{-21pt}
+\begin{flushright}
+	{Looking for a \textbf{May 2024}, 4-month position}
+\end{flushright}
+\sectionlineskip
+\hrule % Horizontal line
+\begin{list}{}{ % List for each individual item in the section
+		\setlength{\leftmargin}{0em} % Margin within the section
+	}
+	\item[] \textbf{Co-op Honours Bachelor of Computer Science}, University of Ottawa \hfill \textit{Expected 2026}
+\end{list}
 
-\vspace{-8pt}
+\vspace{-6pt}
 
 % Skills section
 \begin{rSection}{TECHNICAL SKILLS}
-	Rust, TypeScript, Python, Java, C++, C, Go, C\#, Groovy, PostgreSQL, MySQL, MariaDB, MongoDB, Firebase, Redis, Memcached, OpenStack, Svelte, Vue, React, SvelteKit, Vite, Nuxt, Flutter, Express.js, Fastify, Axum, Actix Web, JSONSchema, OpenAPI, Swagger, Prisma, Diesel, Serde, Skia
+	Programming (Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy),
+	Databases (PostgreSQL, MySQL, MongoDB, Firebase, Redis, Memcached),
+	Vector Databases (Qdrant, pgvector)
+	Frontend (Svelte, Vue, React, SvelteKit, Nuxt, GSAP (GreenSock), Flutter),
+	Web Servers (Express.js, Fastify, Axum, tRPC),
+	Specifications (JSONSchema, OpenAPI, Swagger, Zod),
+	ORM (Prisma, Diesel, SQLx),
+	Machine Learning (TensorFlow, Keras),
+	Tools (Gerrit, Jira, Confluence)
+	Gerrit, Jira, Confluence,
+	Skia, OpenStack
 \end{rSection}
 
 \vspace{-8pt}
 
 % Experience section
 \begin{rSection}{PROFESSIONAL EXPERIENCE}
-	\textbf{Development Engineer} \hfill May 2023 - Sept 2023 \\ Ciena \hfill \textit{Ottawa, ON (Remote)}
+	\textbf{Development Engineer} \hfill May 2023 - Present \\ Ciena \hfill \textit{Ottawa, ON (Remote)}
 
 	\begin{itemize}
 		\itemsep -4pt {}
-		\item Created a code ownership API with \textbf{Express.js}, \textbf{zod}, \textbf{Node.js}, and \textbf{MongoDB} that improved workflow efficiency by 20\%.
-		\item Developed a log query tool with \textbf{Flask}, \textbf{Vue}, and \textbf{Tailwind} that increased debugging efficiency by 30\%.
+		\item Authored a code ownership and test management API with \textbf{Express.js}, \textbf{Zod}, \textbf{Node.js}, and \textbf{MongoDB} that improved workflow efficiency and test coverage by 25\%.
+		\item Developed a log query tool with \textbf{Flask}, \textbf{Vue}, and \textbf{TailwindCSS} that increased debugging efficiency by 30\%.
 		\item Upgraded and improved a computing management tool with \textbf{Python}, \textbf{OpenStack}, and \textbf{Jenkins} that reduced downtime and failures by 15\%.
-		\item Created a full-stack computing resource booking platform with \textbf{Vue}, \textbf{Nuxt}, \textbf{PostgreSQL}, and \textbf{tRPC} that reduced resource conflicts by 20\%.
+		\item Implemented a full-stack computing resource booking platform with \textbf{Vue}, \textbf{Nuxt}, \textbf{PostgreSQL}, and \textbf{tRPC} that reduced resource conflicts by 20\%.
 	\end{itemize}
 
 	\textbf{STEM Instructor} \hfill Jun 2022 - Oct 2022 \\ RoboEDU \hfill \textit{North York, ON (Remote)}
 
 	\begin{itemize}
 		\itemsep -4pt {}
-		\item Developed course material and led students through \textbf{Python} and Scratch courses to teach the fundamentals of programming.
+		\item Developed course material and led students through \textbf{Python} and Scratch courses.
 		\item Formulated a teaching plan to increase student productivity and engagement by 20\%.
 	\end{itemize}
 \end{rSection}
@@ -71,31 +86,36 @@
 
 % Projects section
 \begin{rSection}{PROJECTS}
-	\textbf{StatPixel} \textit{Rust, PostgreSQL, Redis, Skia}
+	\href{https://github.com/statpixel-rs/statpixel}{\underline{\textit{StatPixel}}} \textbf{Rust, PostgreSQL, Redis, Skia}
 	\vspace{-8pt}
 	\begin{itemize}
 		\itemsep -6pt {}
 		\item Developed an application to track and visualize player statistics for Minecraft.
-		\item Built an image generation pipeline with \textbf{Skia} to generate dynamic images.
+		\item Built an \textbf{image generation} pipeline with \textbf{Skia} to generate dynamic images.
 		\item Created 2,000+ leaderboards with \textbf{Redis} and \textbf{PostgreSQL} to efficiently retrieve top performers.
+		\item Leveraged \textbf{code generation} with \textbf{proc-macro}s to reduce boilerplate and improve performance.
 	\end{itemize}
 
-	\textbf{Noteboard} \textit{Svelte, TypeScript, PostgreSQL, tRPC, WebSocket}
+	\vspace{-4pt}
+
+	\href{https://github.com/matteopolak/quasi}{\underline{\textit{Quasi}}} \textbf{Rust, AST, Interpreter}
+	\vspace{-8pt}
+	\begin{itemize}
+		\itemsep -6pt {}
+		\item Wrote a programming language with expressions, functions, and control flow.
+		\item Implemented a \textbf{recursive descent parser} to generate an \textbf{abstract syntax tree}.
+		\item Created an \textbf{interpreter} to execute the AST and evaluate expressions.
+	\end{itemize}
+
+	\vspace{-4pt}
+
+	\href{https://github.com/matteopolak/noteboard}{\underline{\textit{Noteboard}}} \textbf{Svelte, TypeScript, PostgreSQL, tRPC, WebSocket}
 	\vspace{-8pt}
 	\begin{itemize}
 		\itemsep -6pt {}
 		\item Created a music-based collaborative drawing tool with the \textbf{Canvas API}.
-		\item Synchronized drawing data with \textbf{WebSocket} and \textbf{tRPC} for real-time updates.
-		\item Developed a chunking algorithm to reduce bandwidth and reduce latency.
-	\end{itemize}
-
-	\textbf{Twitch Chat Downloader} \textit{Rust, PostgreSQL, Prisma, Iced}
-	\vspace{-8pt}
-	\begin{itemize}
-		\itemsep -6pt {}
-		\item Developed a tool with \textbf{Rust} to download Twitch chat logs at 5,000,000+ messages per hour.
-		\item Created a GUI with \textbf{Iced} to allow users to easily search for streams and download logs.
-		\item Built a database schema with \textbf{Prisma} to store and query chat logs.
+		\item Synchronized drawing data with \textbf{WebSocket}s and \textbf{tRPC} for real-time updates.
+		\item Implemented a user-friendly interface with \textbf{DaisyUI} and \textbf{TailwindCSS}.
 	\end{itemize}
 \end{rSection}
 
@@ -104,8 +124,8 @@
 	\begin{itemize}
 		\itemsep -6pt {}
 		\item	2023 \underline{\href{https://hack-the-hill.devpost.com}{Hack the Hill}} Hackathon, 1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
-		\item 2023 \underline{\href{https://all-in-hackathon.devpost.com/}{MLH x \textbraceleft all in\textbraceright}} Hackathon, 1st
-		\item 2023 \underline{\href{https://maphacks-2.devpost.com}{MapHacks 2}} Hackathon, 1st, Best Sustainable Travel Hack
+		\item 2023 \underline{\href{https://all-in-hackathon.devpost.com/}{MLH x \textbraceleft all in\textbraceright}} Hackathon, 1st Overall
+		\item 2023 \underline{\href{https://maphacks-2.devpost.com}{MapHacks 2}} Hackathon, 1st Overall, Best Sustainable Travel Hack
 		\item	2022 Skills Ontario Coding Competition, 1st
 	\end{itemize}
 \end{rSection}
