@@ -4,22 +4,23 @@
 
 // Creates a link with an underline
 #let ulink(url, text) = underline(link(url, text))
+#let config = toml("config.toml")
 
 #let name = text(
 	size: 25pt,
 	weight: "bold",
 	fill: white,
-	[Matthew Polak]
+	[#config.about.name]
 )
 
 #let about = text(
 	fill: white,
 	[
-		+1 (519) 362-9413 • Ontario, Canada \
-		#ulink("mailto:me@matteopolak.com", [me\@matteopolak.com]) •
-		#ulink("https://matteopolak.com", [matteopolak.com]) •
-		#ulink("https://github.com/matteopolak", [github.com/matteopolak]) •
-		#ulink("https://linkedin.com/in/matteo-polak", [linkedin.com/in/matteo-polak])
+		#config.about.phone • #config.about.location \
+		#ulink("mailto:" + config.about.email, config.about.email) •
+		#ulink("https://" + config.about.website, config.about.website) •
+		#ulink("https://github.com/" + config.about.github, "github.com/" + config.about.github) •
+		#ulink("https://linkedin.com/in/" + config.about.linkedin, "linkedin.com/in/" + config.about.linkedin)
 	]
 )
 
@@ -39,7 +40,7 @@
 #stack(
 	dir: ltr,
 	align(start, upper([*Education*])),
-	align(end, [Looking for a *May 2024*, 4-month position])
+	align(end, eval(config.education.blurb, mode: "markup"))
 )
 
 #v(0.6em, weak: true)
