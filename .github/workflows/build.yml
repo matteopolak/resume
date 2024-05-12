@@ -12,6 +12,8 @@ name: build
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v3
@@ -20,8 +22,10 @@ jobs:
       - run: typst compile resume.typ resume.pdf
         env:
           TYPST_FONT_PATHS: ${{ github.workspace }}/fonts
-      - uses: actions/upload-artifact@v4
+      - uses: softprops/action-gh-release@v2
         with:
-          name: MatthewPolakResume
-          path: resume.pdf
+          files: resume.pdf
+          name: Latest resume 🎉
+          make_latest: true
+          generate_release_notes: true
 
