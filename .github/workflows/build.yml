@@ -5,6 +5,7 @@ on:
     paths:
       - "resume.typ"
       - "config.toml"
+      - "fonts/**"
       - ".github/workflows/build.yml"
 
 name: build
