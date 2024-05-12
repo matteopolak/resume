@@ -14,7 +14,17 @@ achievements = [
 	"2022 Skills Ontario Coding Competition, 1st"
 ]
 
-skills = [
+keywords = ["resume", "curriculum vitae", "cv", "software engineer", "developer", "programmer"]
+
+[education]
+blurb = "Looking for a *January 2025*, 4-month position"
+degree = "Co-op Honours Bachelor of Computer Science"
+school = "University of Ottawa"
+graduation = "Expected 2026"
+
+[skills]
+soft = ["Software Systems", "Programming", "Innovative Thinking"]
+technical = [
 	"Rust", "TypeScript", "Go", "Python", "Java", "C++", "C", "C#", "Groovy", "PostgreSQL",
 	"MySQL", "MongoDB", "Firebase", "Redis", "Memcached", "Qdrant", "InfluxDB", "TimescaleDB",
 	"JavaScript", "HTML", "CSS", "Svelte", "Vue", "React", "SvelteKit", "Nuxt", "Next.js",
@@ -23,14 +33,6 @@ skills = [
 	"Jira", "Confluence", "Skia", "wgpu", "OpenStack", "Docker", "Unity", "Bevy", "Git", "Gerrit",
 	"Ansible"
 ]
-
-keywords = ["resume", "curriculum vitae", "cv", "software engineer", "developer", "programmer"]
-
-[education]
-blurb = "Looking for a *January 2025*, 4-month position"
-degree = "Co-op Honours Bachelor of Computer Science"
-school = "University of Ottawa"
-graduation = "Expected 2026"
 
 [[experience]]
 title = "Software Engineer"
@@ -51,19 +53,19 @@ location = "North York, ON (Remote)"
 start = 2022-06-01
 end = 2022-08-01
 achievements = [
-	"Developed course material and led students through *Python* and Scratch courses.",
-	"Formulated a teaching plan to increase student productivity and engagement by 20%."
+	"Designed engaging course material and led 10-20 students through *Python* and Scratch courses.",
+	"Devised a teaching plan to increase student productivity and engagement by 20%."
 ]
 
 [[project]]
 title = "StatPixel"
 github = "statpixel-rs/statpixel"
-tags = ["Rust", "PostgreSQL", "Redis", "Skia", "wgpu", "WGSL"]
+tags = ["Rust", "PostgreSQL", "Redis", "Skia", "WGSL"]
 achievements = [
-	"Developed an application to track and visualize player statistics for Minecraft.",
-	"Built an *image generation* pipeline with *Skia* to generate dynamic images.",
-	"Created 2,000+ leaderboards with *Redis* and *PostgreSQL* to efficiently retrieve top performers.",
-	"Leveraged *code generation* to reduce boilerplate and improve performance."
+	"Cultivated a community of over 10,000 users to track and visualize their statistics in real time.",
+	"Deployed an *image generation* pipeline with *Skia*, generating 500+ daily personalized images.",
+	"Organized 2,000+ leaderboards with *Redis* to efficiently retrieve top performers in milliseconds.",
+	"Leveraged *code generation* to reduce boilerplate by 90% and improve performance."
 ]
 
 [[project]]
@@ -71,9 +73,9 @@ title = "Basket"
 github = "matteopolak/basket"
 tags = ["Rust", "HTTP"]
 achievements = [
-	"Implemented the *HTTP/1.1* protocol with *Rust* to handle requests and responses.",
-	"Created an HTTP client from scratch using *TCP* sockets.",
-	"Developed a *multi-threaded HTTP server* with built-in routing support."
+	"Implemented a parser for the *HTTP/1.1* protocol in *Rust* with support for streaming data.",
+	"Architected an HTTP client from scratch using *TCP* sockets, exposing a clean public API.",
+	"Developed a *multi-threaded HTTP server* with built-in routing support and best-of-class performance."
 ]
 
 [[project]]
@@ -81,7 +83,7 @@ title = "Crave"
 github = "matteopolak/crave"
 tags = ["Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"]
 achievements = [
-	"Designed a *recipe sharing* platform with personalized recommendations and a social feed.",
-	"Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank recipes.",
-	"Implemented a user-friendly interface with *DaisyUI* and *TailwindCSS*."
+	"Launched a *recipe-sharing* platform with 25 users that creates personalized recommendations.",
+	"Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank 100,000 recipes.",
+	"Designed a user-friendly interface with *DaisyUI* and *TailwindCSS*, improving CTR by 40%."
 ]

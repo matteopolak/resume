@@ -22,8 +22,9 @@
 // Formats a project entry
 #let project(title: "", github: "", tags: (), achievements: ()) = {
 	[
-		#emph(link("https://github.com/" + github, title))
-		#tags.map(strong).join(", ")
+		#link("https://github.com/" + github, title)
+		--
+		#tags.map(t => text(weight: "semibold", t)).join(", ")
 	]
 
 	space(h: 0.7em)
@@ -41,3 +42,13 @@
 	line(length: 100%)
 }
 
+#let header(content, padding: 0.4in, alignment: center + horizon) = box(
+	width: 100%,
+	fill: rgb(38, 38, 38),
+	// we want to push the content below it down
+	inset: (bottom: padding),
+	// but since this is at the top, we want to fill
+	// the margin with the background of the box
+	outset: (x: padding, top: padding),
+	align(alignment, content)
+)

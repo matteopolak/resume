@@ -28,31 +28,18 @@
 	size: 45pt,
 	font: "jersey 10",
 	weight: "bold",
-	fill: white,
 	config.name
 )
 
-#let about = text(
-	fill: white,
-	[
-		#config.phone • #config.location \
-		#link("mailto:" + config.email, config.email) •
-		#link("https://" + config.website, config.website) •
-		#link("https://github.com/" + config.github, "github.com/" + config.github) •
-		#link("https://linkedin.com/in/" + config.linkedin, "linkedin.com/in/" + config.linkedin)
-	]
-)
+#let about = [
+	#config.phone • #config.location \
+	#link("mailto:" + config.email, config.email) •
+	#link("https://" + config.website, config.website) •
+	#link("https://github.com/" + config.github, "github.com/" + config.github) •
+	#link("https://linkedin.com/in/" + config.linkedin, "linkedin.com/in/" + config.linkedin)
+]
 
-#box(
-	width: 100%,
-	fill: rgb(38, 38, 38),
-	// we want to push the content below it down
-	inset: (bottom: 0.4in),
-	// but since this is at the top, we want to fill
-	// the margin with the background of the box
-	outset: (x: 0.4in, top: 0.4in),
-	align(center + horizon, [#name #space(h: 1em) #about])
-)
+#header(text(fill: white, [#name #space(h: 1em) #about]))
 
 #space(h: 0.3in)
 
@@ -62,8 +49,8 @@
 #h(1fr)
 _#emph(config.education.graduation)_
 
-#section(title: "Technical Skills")
-#text(spacing: 100%, config.skills.join(", "))
+#section(title: "Technical Skills", right: config.skills.soft.join(", "))
+#text(spacing: 100%, config.skills.technical.join(", "))
 
 #section(title: "Professional Experience")
 
