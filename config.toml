@@ -1,4 +1,3 @@
-[about]
 name = "Matthew Polak"
 phone = "+1 (519) 362-9413"
 location = "Ontario, Canada"
@@ -8,6 +7,81 @@ website = "matteopolak.com"
 github = "matteopolak"
 linkedin = "matteo-polak"
 
+achievements = [
+	"2023 #link(\"https://hack-the-hill.devpost.com\", \"Hack the Hill\") Hackathon, 1st (Ciena track), Best Developer Experience, Best Cybersecurity Project",
+	"2023 #link(\"https://all-in-hackathon.devpost.com\", \"MLH x {all in}\") Hackathon, 1st Overall",
+	"2023 #link(\"https://maphacks-2.devpost.com\", \"MapHacks 2\") Hackathon, 1st Overall, Best Sustainable Travel Hack",
+	"2022 Skills Ontario Coding Competition, 1st"
+]
+
+skills = [
+	"Rust", "TypeScript", "Go", "Python", "Java", "C++", "C", "C#", "Groovy", "PostgreSQL",
+	"MySQL", "MongoDB", "Firebase", "Redis", "Memcached", "Qdrant", "InfluxDB", "TimescaleDB",
+	"JavaScript", "HTML", "CSS", "Svelte", "Vue", "React", "SvelteKit", "Nuxt", "Next.js",
+	"GSAP (GreenSock)", "Flutter", "Express.js", "Fastify", "Axum", "tRPC", "JSONSchema",
+	"OpenAPI", "Swagger", "Zod", "Drizzle", "Diesel", "PyTorch", "TensorFlow", "Keras", "Gerrit",
+	"Jira", "Confluence", "Skia", "wgpu", "OpenStack", "Docker", "Unity", "Bevy", "Git", "Gerrit"
+]
+
+keywords = ["resume", "curriculum vitae", "cv", "software engineer", "developer", "programmer"]
+
 [education]
 blurb = "Looking for a *May 2024*, 4-month position"
+degree = "Co-op Honours Bachelor of Computer Science"
+school = "University of Ottawa"
+graduation = "Expected 2026"
 
+[[experience]]
+title = "Software Engineer"
+company = "Ciena"
+location = "Ottawa, ON (Remote)"
+start = 2023-05-01
+achievements = [
+	"Authored a code ownership and test management API with *Express.js*, *Zod*, *Node.js*, and *MongoDB* that improved workflow efficiency and test coverage by 25%.",
+	"Developed a log query tool with *Flask*, *Vue*, and *TailwindCSS* that increased debugging efficiency by 30%.",
+	"Upgraded and improved a computing management tool with *Python*, *OpenStack*, and *Jenkins* that reduced downtime and failures by 15%.",
+	"Implemented a full-stack computing resource booking platform with *Vue*, *Nuxt*, *PostgreSQL*, and *tRPC* that reduced resource conflicts by 20%."
+
+]
+
+[[experience]]
+title = "STEM Instructor"
+company = "RoboEDU"
+location = "North York, ON (Remote)"
+start = 2022-06-01
+end = 2022-08-01
+achievements = [
+	"Developed course material and led students through *Python* and Scratch courses.",
+	"Formulated a teaching plan to increase student productivity and engagement by 20%."
+]
+
+[[project]]
+title = "StatPixel"
+github = "statpixel-rs/statpixel"
+tags = ["Rust", "PostgreSQL", "Redis", "Skia", "wgpu", "WGSL"]
+achievements = [
+	"Developed an application to track and visualize player statistics for Minecraft.",
+	"Built an *image generation* pipeline with *Skia* to generate dynamic images.",
+	"Created 2,000+ leaderboards with *Redis* and *PostgreSQL* to efficiently retrieve top performers.",
+	"Leveraged *code generation* to reduce boilerplate and improve performance."
+]
+
+[[project]]
+title = "Basket"
+github = "matteopolak/basket"
+tags = ["Rust", "HTTP"]
+achievements = [
+	"Implemented the *HTTP/1.1* protocol with *Rust* to handle requests and responses.",
+	"Created an HTTP client from scratch using *TCP* sockets.",
+	"Developed a *multi-threaded HTTP server* with built-in routing support."
+]
+
+[[project]]
+title = "Crave"
+github = "matteopolak/crave"
+tags = ["Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"]
+achievements = [
+	"Designed a *recipe sharing* platform with personalized recommendations and a social feed.",
+	"Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank recipes.",
+	"Implemented a user-friendly interface with *DaisyUI* and *TailwindCSS*."
+]

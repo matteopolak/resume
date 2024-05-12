@@ -3,8 +3,9 @@ on:
     branches:
       - main
     paths:
-      - "*.tex"
-      - ".github/workflows/*.yml"
+      - "resume.typ"
+      - "config.toml"
+      - ".github/workflows/build.yml"
 
 name: build
 
@@ -12,17 +13,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v3
         with:
-          fetch-depth: 0
-      - uses: xu-cheng/latex-action@v2
+          cache-dependency-path: requirements.typ
+      - run: typst compile resume.typ resume.pdf
+        env:
+          TYPST_FONT_PATHS: ${{ github.workspace }}/fonts
+      - uses: actions/upload-artifact@v4
         with:
-          root_file: resume.tex
-      - name: Upload PDF to latest release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: resume.pdf
-          asset_name: MatthewPolakResume.pdf
-          tag: latest
-          overwrite: true
+          name: MatthewPolakResume
+          path: resume.pdf
+

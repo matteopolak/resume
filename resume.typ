@@ -1,26 +1,69 @@
-#set page(paper: "us-letter", margin: 0.4in)
-#set text(font: "Open Sans", weight: "regular", size: 11pt, hyphenate: true)
-#set par(leading: 0.5em)
-
-// Creates a link with an underline
-#let ulink(url, text) = underline(link(url, text))
 #let config = toml("config.toml")
 
+// Document setup
+#set page(paper: "us-letter", margin: 0.4in)
+#set document(
+	title: config.at("title", default: config.name + "'s Resume"),
+	author: config.at("author", default: config.name),
+	keywords: config.keywords.join(", "),
+)
+
+// Typography setup
+#set text(font: "open sans", weight: "regular", size: 10.5pt, hyphenate: true)
+#set par(leading: 0.35em)
+#set list(indent: 1em, spacing: 0.65em, tight: false)
+
+// Underline all links
+#show link: underline
+
+// Creates a horizontal line with a small amount of vertical padding
+#let tline(head) = [
+	#head
+	#v(0.6em, weak: true)
+	#line(length: 100%, stroke: 0.5pt)
+	#v(0.6em, weak: true)
+]
+
+// Formats a job entry
+#let job(title: "", company: "", location: "", start: "", end: "Present", achievements: ()) = {
+	let format = "[month repr:long] [year]"
+	let end = if type(end) == str [#end] else [#end.display(format)]
+
+	stack(
+		dir: ltr,
+		align(alignment.start, [*#title* \ #company]),
+		align(alignment.end, [#start.display(format) --- #end \ _#(location)_])
+	)
+
+	list(..achievements)
+}
+
+// Formats a project entry
+#let project(title: "", github: "", tags: (), achievements: ()) = {
+	[
+		#emph(link("https://github.com/" + github, title))
+		#tags.map(t => [*#t*]).join(", ")
+	]
+
+	list(..achievements)
+}
+
 #let name = text(
-	size: 25pt,
+	size: 35pt,
+	font: "jersey 10",
 	weight: "bold",
 	fill: white,
-	[#config.about.name]
+	config.name
 )
 
 #let about = text(
 	fill: white,
 	[
-		#config.about.phone • #config.about.location \
-		#ulink("mailto:" + config.about.email, config.about.email) •
-		#ulink("https://" + config.about.website, config.about.website) •
-		#ulink("https://github.com/" + config.about.github, "github.com/" + config.about.github) •
-		#ulink("https://linkedin.com/in/" + config.about.linkedin, "linkedin.com/in/" + config.about.linkedin)
+		#config.phone • #config.location \
+		#link("mailto:" + config.email, config.email) •
+		#link("https://" + config.website, config.website) •
+		#link("https://github.com/" + config.github, "github.com/" + config.github) •
+		#link("https://linkedin.com/in/" + config.linkedin, "linkedin.com/in/" + config.linkedin)
 	]
 )
 
@@ -37,144 +80,48 @@
 
 #v(0.25in, weak: true)
 
-#stack(
+#tline(stack(
 	dir: ltr,
 	align(start, upper([*Education*])),
 	align(end, eval(config.education.blurb, mode: "markup"))
-)
-
-#v(0.6em, weak: true)
-#line(length: 100%)
-#v(0.6em, weak: true)
+))
 
 #stack(
 	dir: ltr,
-	align(start, [*Co-op Honours Bachelor of Computer Science*, University of Ottawa]),
-	align(end, [_Expected 2026_])
+	align(start, [*#config.education.degree*, #config.education.school]),
+	align(end, [_#(config.education.graduation)_])
 )
 
-#upper([*Technical Skills*])
-#v(0.6em, weak: true)
-#line(length: 100%)
-#v(0.6em, weak: true)
+#tline(upper([*Technical Skills*]))
 
-#text(spacing: 50%)[
-	Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy, PostgreSQL,
-	MySQL, MongoDB, Firebase, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
-	JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
-	GSAP (GreenSock), Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema,
-	OpenAPI, Swagger, Zod, Drizzle, Diesel, PyTorch, TensorFlow, Keras, Gerrit,
-	Jira, Confluence, Skia, wgpu, OpenStack, Docker, Unity, Bevy, Git, Gerrit
-]
+#text(spacing: 100%, config.skills.join(", "))
 
-#upper([*Professional Experience*])
-#v(0.6em, weak: true)
-#line(length: 100%)
-#v(0.6em, weak: true)
+#tline(upper([*Professional Experience*]))
 
-// title: str | content
-// company: str | content
-// location: str | content
-// start: datetime
-// end: datetime | none
-// achivements: array[str | content]
-#let job(title: "", company: "", location: "", start: "", end: "Present", achievements: ()) = {
-	let format = "[month repr:long] [year]"
-	let end = if type(end) == str [#end] else [#end.display(format)]
-
-	stack(
-		dir: ltr,
-		align(alignment.start, [*#title* \ #company]),
-		align(alignment.end, [#start.display(format) - #end \ _#(location)_])
+#for data in config.experience {
+	job(
+		..data,
+		achievements: data.achievements
+			.map(a => eval(a, mode: "markup"))
 	)
-
-	list(indent: 0.15in, ..achievements)
 }
 
-#job(
-	title: "Software Engineer",
-	company: "Ciena",
-	location: "Ottawa, ON (Remote)",
-	start: datetime(year: 2023, month: 5, day: 1),
-	achievements: (
-		[Authored a code ownership and test management API with *Express.js*, *Zod*, *Node.js*, and *MongoDB* that improved workflow efficiency and test coverage by 25%.],
-		[Developed a log query tool with *Flask*, *Vue*, and *TailwindCSS* that increased debugging efficiency by 30%.],
-		[Upgraded and improved a computing management tool with *Python*, *OpenStack*, and *Jenkins* that reduced downtime and failures by 15%.],
-		[Implemented a full-stack computing resource booking platform with *Vue*, *Nuxt*, *PostgreSQL*, and *tRPC* that reduced resource conflicts by 20%.]
+#tline(upper([*Projects*]))
+
+#for data in config.project {
+	project(
+		..data,
+		achievements: data.achievements
+			.map(a => eval(a, mode: "markup"))
 	)
-)
-
-#job(
-	title: "STEM Instructor",
-	company: "RoboEDU",
-	location: "North York, ON (Remote)",
-	start: datetime(year: 2022, month: 6, day: 1),
-	end: datetime(year: 2022, month: 8, day: 1),
-	achievements: (
-		[Developed course material and led students through *Python* and Scratch courses.],
-		[Formulated a teaching plan to increase student productivity and engagement by 20%.]
-	)
-)
-
-#upper([*Projects*])
-#v(0.6em, weak: true)
-#line(length: 100%)
-#v(0.6em, weak: true)
-
-#let project(title: "", github: "", tech: (), achievements: ()) = {
-	[
-		#emph(ulink("https://github.com/" + github, title))
-		#tech.map(t => [*#t*]).join(", ")
-	]
-
-	list(indent: 0.15in, ..achievements)
 }
 
-#project(
-	title: "StatPixel",
-	github: "statpixel-rs/statpixel",
-	tech: ("Rust", "PostgreSQL", "Redis", "Skia", "wgpu", "wgsl"),
-	achievements: (
-		[Developed an application to track and visualize player statistics for Minecraft.],
-		[Built an *image generation* pipeline with *Skia* to generate dynamic images.],
-		[Created 2,000+ leaderboards with *Redis* and *PostgreSQL* to efficiently retrieve top performers.],
-		[Leveraged *code generation* to reduce boilerplate and improve performance.]
-	)
-)
-
-#project(
-	title: "Basket",
-	github: "matteopolak/basket",
-	tech: ("Rust", "HTTP"),
-	achievements: (
-		[Implemented the *HTTP/1.1* protocol with *Rust* to handle requests and responses.],
-		[Created an HTTP client from scratch using *TCP* sockets.],
-		[Developed a *multi-threaded HTTP server* with built-in routing support.]
-	)
-)
-
-#project(
-	title: "Crave",
-	github: "matteopolak/crave",
-	tech: ("Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"),
-	achievements: (
-		[Designed a *recipe sharing* platform with personalized recommendations and a social feed.],
-		[Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank recipes.],
-		[Implemented a user-friendly interface with *DaisyUI* and *TailwindCSS*.]
-	)
-)
-
-#upper([*Achievements*])
-#v(0.6em, weak: true)
-#line(length: 100%)
-#v(0.6em, weak: true)
+#tline(upper([*Achievements*]))
 
 #set list(indent: 0.15in)
 
-- 2023 #ulink("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
-  1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
-- 2023 #ulink("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
-- 2023 #ulink("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon, 1st Overall,
-  Best Sustainable Travel Hack
-- 2022 Skills Ontario Coding Competition, 1st
+#list(
+	..config.achievements
+		.map(a => eval(a, mode: "markup"))
+)
 
