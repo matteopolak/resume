@@ -26,6 +26,7 @@ jobs:
         with:
           files: resume.pdf
           name: Latest resume 🎉
+          tag_name: latest
           make_latest: true
           generate_release_notes: true
 
