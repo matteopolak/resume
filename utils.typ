@@ -1,6 +1,9 @@
 // Creates a consistent vertical spacing
 #let space(h: 0.6em) = v(h, weak: true)
 
+// Shortcut for evaluating a string as markup
+#let markup(str) = eval(str, mode: "markup")
+
 // Formats a job entry
 #let job(title: "", company: "", location: "", start: "", end: "Present", achievements: ()) = {
 	let format = "[month repr:long] [year]"
@@ -28,8 +31,13 @@
 }
 
 // Creates a section heading
-#let section(title: "") = {
-	upper(strong(title))
+#let section(title: "", right: "") = {
+	[
+		*#upper(title)*
+		#h(1fr)
+		#right
+	]
+
 	line(length: 100%)
 }
 

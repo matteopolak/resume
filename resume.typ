@@ -56,19 +56,11 @@
 
 #space(h: 0.3in)
 
-#stack(
-	dir: ltr,
-	align(start, upper(strong("Education"))),
-	align(end, eval(config.education.blurb, mode: "markup"))
-)
+#section(title: "Education", right: markup(config.education.blurb))
 
-#line(length: 100%)
-
-#stack(
-	dir: ltr,
-	align(start, [*#config.education.degree*, #config.education.school]),
-	align(end, emph(config.education.graduation))
-)
+*#config.education.degree*, #config.education.school
+#h(1fr)
+_#emph(config.education.graduation)_
 
 #section(title: "Technical Skills")
 #text(spacing: 100%, config.skills.join(", "))
@@ -78,8 +70,7 @@
 #for data in config.experience {
 	job(
 		..data,
-		achievements: data.achievements
-			.map(a => eval(a, mode: "markup"))
+		achievements: data.achievements.map(markup)
 	)
 }
 
@@ -88,14 +79,10 @@
 #for data in config.project {
 	project(
 		..data,
-		achievements: data.achievements
-			.map(a => eval(a, mode: "markup"))
+		achievements: data.achievements.map(markup)
 	)
 }
 
 #section(title: "Achievements")
-#list(
-	..config.achievements
-		.map(a => eval(a, mode: "markup"))
-)
+#list(..config.achievements.map(markup))
 
