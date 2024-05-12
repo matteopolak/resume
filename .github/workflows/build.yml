@@ -19,12 +19,12 @@ jobs:
       - uses: typst-community/setup-typst@v3
         with:
           cache-dependency-path: requirements.typ
-      - run: typst compile resume.typ resume.pdf
+      - run: typst compile resume.typ MatthewPolakResume.pdf
         env:
           TYPST_FONT_PATHS: ${{ github.workspace }}/fonts
       - uses: softprops/action-gh-release@v2
         with:
-          files: resume.pdf
+          files: MatthewPolakResume.pdf
           name: Latest resume 🎉
           tag_name: latest
           make_latest: true
