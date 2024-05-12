@@ -16,6 +16,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+      - uses: fontist/setup-fontist@v2
+      - run: fontist install "Open Sans"
       - uses: typst-community/setup-typst@v3
         with:
           cache-dependency-path: requirements.typ
