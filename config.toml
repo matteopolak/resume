@@ -41,7 +41,6 @@ achievements = [
 	"Developed a log query tool with *Flask*, *Vue*, and *TailwindCSS* that increased debugging efficiency by 30%.",
 	"Upgraded and improved a computing management tool with *Python*, *OpenStack*, and *Jenkins* that reduced downtime and failures by 15%.",
 	"Implemented a full-stack computing resource booking platform with *Vue*, *Nuxt*, *PostgreSQL*, and *tRPC* that reduced resource conflicts by 20%."
-
 ]
 
 [[experience]]
