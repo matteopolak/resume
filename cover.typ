@@ -33,7 +33,7 @@
 #header(
 	text(fill: white, stack(dir: ltr, [
 			#name \
-			#text(size: 10pt, "Computer Science student")
+			#text(size: 10pt, config.major + " student")
 		],
 		align(right, about)
 	)),
