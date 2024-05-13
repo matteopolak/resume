@@ -35,8 +35,8 @@
 	#config.phone • #config.location \
 	#link("mailto:" + config.email, config.email) •
 	#link("https://" + config.website, config.website) •
-	#link("https://github.com/" + config.github, "github.com/" + config.github) •
-	#link("https://linkedin.com/in/" + config.linkedin, "linkedin.com/in/" + config.linkedin)
+	#link("https://github.com/" + config.github, "github/" + config.github) •
+	#link("https://linkedin.com/in/" + config.linkedin, "linkedin/" + config.linkedin)
 ]
 
 #header(text(fill: white, [#name #space(h: 1em) #about]))
@@ -49,7 +49,7 @@
 #h(1fr)
 _#emph(config.education.graduation)_
 
-#section(title: "Technical Skills", right: config.skills.soft.join(", "))
+#section(title: "Technical Skills")
 #text(spacing: 100%, config.skills.technical.join(", "))
 
 #section(title: "Professional Experience")

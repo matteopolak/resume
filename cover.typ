@@ -22,13 +22,29 @@
 	config.name
 )
 
-#let about = [
-	#config.phone • #config.location \
-	#link("mailto:" + config.email, config.email) •
-	#link("https://" + config.website, config.website) \
-	#link("https://linkedin.com/in/" + config.linkedin, "linkedin/" + config.linkedin) •
-	#link("https://github.com/" + config.github, "github/" + config.github)
-]
+#let about = text(
+	size: 10pt,
+	stack(
+		dir: ltr,
+		spacing: 0.5em,
+		[
+			#config.phone \
+			#link("mailto:" + config.email, config.email) \
+			#link("https://linkedin.com/in/" + config.linkedin, "linkedin/" + config.linkedin)
+		],
+		// vertical line
+		line(
+			stroke: 1pt + white,
+			angle: 90deg,
+			length: 40pt
+		),
+		align(start, [
+			#config.location \
+			#link("https://" + config.website, config.website) \
+			#link("https://github.com/" + config.github, "github/" + config.github)
+		])
+	)
+)
 
 #header(
 	text(fill: white, stack(dir: ltr, [

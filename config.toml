@@ -13,7 +13,7 @@ achievements = [
 	"2023 #link(\"https://hack-the-hill.devpost.com\", \"Hack the Hill\") Hackathon, 1st (Ciena track), Best Developer Experience, Best Cybersecurity Project",
 	"2023 #link(\"https://all-in-hackathon.devpost.com\", \"MLH x {all in}\") Hackathon, 1st Overall",
 	"2023 #link(\"https://maphacks-2.devpost.com\", \"MapHacks 2\") Hackathon, 1st Overall, Best Sustainable Travel Hack",
-	"2022 Skills Ontario Coding Competition, 1st"
+	"2022 Skills Ontario Coding Competition, 1st --- 2021 Skills Ontario Coding Competition, 2nd"
 ]
 
 keywords = ["resume", "curriculum vitae", "cv", "software engineer", "developer", "programmer"]
@@ -25,7 +25,6 @@ school = "University of Ottawa"
 graduation = "Expected 2026"
 
 [skills]
-soft = ["Software Systems", "Programming", "Innovative Thinking"]
 technical = [
 	"Rust", "TypeScript", "Go", "Python", "Java", "C++", "C", "C#", "Groovy", "PostgreSQL",
 	"MySQL", "MongoDB", "Firebase", "Redis", "Memcached", "Qdrant", "InfluxDB", "TimescaleDB",
