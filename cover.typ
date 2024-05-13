@@ -90,3 +90,14 @@ Thank you for your time and consideration. I look forward to hearing from you so
 
 Regards, \
 #config.name
+
+#space(h: 0.1fr)
+
+#box(
+	width: 100%,
+	fill: rgb(38, 38, 38),
+	// but since this is at the top, we want to fill
+	// the margin with the background of the box
+	outset: (x: 0.4in, bottom: 0.4in),
+)
+
