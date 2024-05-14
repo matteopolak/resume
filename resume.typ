@@ -122,7 +122,7 @@ Ansible
 )
 
 #section(title: "Achievements")
-- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackatho,
+- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
 	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
 - 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
 - 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
