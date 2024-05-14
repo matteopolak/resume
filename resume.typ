@@ -7,7 +7,7 @@
 #set document(
 	title: config.at("title", default: config.name + "'s Resume"),
 	author: config.at("author", default: config.name),
-	keywords: config.keywords.join(", "),
+	keywords: "resume, curriculum vitae, cv, software engineer, developer, programmer"
 )
 
 // typography setup
@@ -43,33 +43,89 @@
 
 #space(h: 0.3in)
 
-#section(title: "Education", right: markup(config.education.blurb))
+#section(title: "Education", right: [Looking for a *January 2025*, 4-month position])
 
-*#config.education.degree*, #config.education.school
+*Co-op Honours Bachelor of Computer Science*, University of Ottawa
 #h(1fr)
-_#emph(config.education.graduation)_
+_Expected 2026_
 
 #section(title: "Technical Skills")
-#text(spacing: 100%, config.skills.technical.join(", "))
+Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy, PostgreSQL,
+MySQL, MongoDB, Firebase, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
+JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
+GSAP (GreenSock), Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema,
+OpenAPI, Swagger, Zod, Drizzle, Diesel, PyTorch, TensorFlow, Keras, Gerrit,
+Jira, Confluence, Skia, wgpu, OpenStack, Docker, Unity, Bevy, Git, Gerrit,
+Ansible
 
 #section(title: "Professional Experience")
 
-#for data in config.experience {
-	job(
-		..data,
-		achievements: data.achievements.map(markup)
+#job(
+	title: "Software Engineer",
+	company: "Ciena",
+	location: "Ottawa, ON (Remote)",
+	start: datetime(year: 2023, month: 5, day: 1),
+	achievements: (
+		[Authored a code ownership and test management API with *Express.js*, *Zod*, *Node.js*, and *MongoDB* that improved workflow efficiency and test coverage by 25%.],
+		[Upgraded and improved a computing management tool with *Python*, *OpenStack*, and *Ansible* that reduced downtime and failures by 40%.],
+		[Released a full-stack computing resource booking platform with *Nuxt*, *PostgreSQL*, and *tRPC* that reduced order wait times by 95%.],
+		[Designed and implemented a *Rust* microservice to categorize and assign errors, improving MTTR by 30%.]
 	)
-}
+)
+
+#job(
+	title: "STEM Instructor",
+	company: "RoboEDU",
+	location: "North York, ON (Remote)",
+	start: datetime(year: 2022, month: 6, day: 1),
+	end: datetime(year: 2022, month: 08, day: 1),
+	achievements: (
+		[Designed engaging course material and led 10-20 students through *Python* and Scratch courses.],
+		[Devised a teaching plan that increased student productivity and engagement by 20%.]
+	)
+)
 
 #section(title: "Projects")
 
-#for data in config.project {
-	project(
-		..data,
-		achievements: data.achievements.map(markup)
+#project(
+	title: "StatPixel",
+	github: "statpixel-rs/statpixel",
+	tags: ("Rust", "PostgreSQL", "Redis", "Skia", "WGSL"),
+	achievements: (
+		[Cultivated a community of over 10,000 users to track and visualize their statistics in real time.],
+		[Deployed an *image generation* pipeline with *Skia*, generating 500+ daily personalized images.],
+		[Organized 2,000+ leaderboards with *Redis* to efficiently retrieve top performers in 2-10 milliseconds.],
+		[Leveraged *code generation* to reduce boilerplate by 90% and improve performance.]
 	)
-}
+)
+
+#project(
+	title: "Basket",
+	github: "matteopolak/basket",
+	tags: ("Rust", "HTTP"),
+	achievements: (
+		[Implemented a parser for the *HTTP/1.1* protocol in *Rust* with support for streaming data.],
+		[Architected an HTTP client from scratch using *TCP* sockets, exposing a clean public API.],
+		[Developed a *multi-threaded HTTP server* with built-in routing support and best-of-class performance.]
+	)
+)
+
+#project(
+	title: "Crave",
+	github: "matteopolak/crave",
+	tags: ("Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"),
+	achievements: (
+		[Launched a *recipe-sharing* platform with 25 users that creates personalized recommendations.],
+		[Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank 100,000 recipes.],
+		[Designed a user-friendly interface with *DaisyUI* and *TailwindCSS*, improving CTR by 40%.]
+	)
+)
 
 #section(title: "Achievements")
-#list(..config.achievements.map(markup))
+- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackatho,
+	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
+- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
+- 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
+	1st Overall, Best Sustainable Travel Hack
+- 2022 Skills Ontario Coding Competition, 1st --- 2021 Skills Ontario Coding Competition, 2nd
 

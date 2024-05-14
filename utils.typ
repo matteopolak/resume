@@ -1,10 +1,10 @@
-// Creates a consistent vertical spacing
+// Create a consistent vertical spacing
 #let space(h: 0.6em) = v(h, weak: true)
 
 // Shortcut for evaluating a string as markup
 #let markup(str) = eval(str, mode: "markup")
 
-// Formats a job entry
+// Format a job entry
 #let job(title: "", company: "", location: "", start: "", end: "Present", achievements: ()) = {
 	let format = "[month repr:long] [year]"
 	let end = if type(end) == str [#end] else [#end.display(format)]
@@ -19,7 +19,7 @@
 	list(..achievements)
 }
 
-// Formats a project entry
+// Format a project entry
 #let project(title: "", github: "", tags: (), achievements: ()) = {
 	[
 		#link("https://github.com/" + github, title)
@@ -31,7 +31,7 @@
 	list(..achievements)
 }
 
-// Creates a section heading
+// Create a section heading
 #let section(title: "", right: "") = {
 	[
 		*#upper(title)*
@@ -42,6 +42,7 @@
 	line(length: 100%)
 }
 
+// Create a coloured header with some centered content
 #let header(content, padding: 0.4in, alignment: center + horizon) = box(
 	width: 100%,
 	fill: rgb(38, 38, 38),

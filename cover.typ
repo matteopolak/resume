@@ -6,7 +6,7 @@
 #set document(
 	title: config.at("title", default: config.name + "'s Cover Letter"),
 	author: config.at("author", default: config.name),
-	keywords: config.keywords.join(", "),
+	keywords: "cover letter, software engineer, developer, programmer",
 )
 
 #set text(font: "open sans", weight: "regular", size: 10.5pt, hyphenate: true)
@@ -49,7 +49,7 @@
 #header(
 	text(fill: white, stack(dir: ltr, [
 			#name \
-			#text(size: 10pt, config.major + " student")
+			#text(size: 10pt, "Computer Science student")
 		],
 		align(right, about)
 	)),
