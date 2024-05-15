@@ -49,15 +49,6 @@
 #h(1fr)
 _Expected 2026_
 
-#section(title: "Technical Skills")
-Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy, PostgreSQL,
-MySQL, MongoDB, Firebase, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
-JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
-GSAP (GreenSock), Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema,
-OpenAPI, Swagger, Zod, Drizzle, Diesel, PyTorch, TensorFlow, Keras, Gerrit,
-Jira, Confluence, Skia, wgpu, OpenStack, Docker, Unity, Bevy, Git, Gerrit,
-Ansible
-
 #section(title: "Professional Experience")
 
 #job(
@@ -84,6 +75,14 @@ Ansible
 		[Devised a teaching plan that increased student productivity and engagement by 20%.]
 	)
 )
+
+#section(title: "Achievements")
+- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
+	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
+- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
+- 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
+	1st Overall, Best Sustainable Travel Hack
+- 2022 Skills Ontario Coding Competition, 1st --- 2021 Skills Ontario Coding Competition, 2nd
 
 #section(title: "Projects")
 
@@ -121,11 +120,12 @@ Ansible
 	)
 )
 
-#section(title: "Achievements")
-- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
-	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
-- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
-- 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
-	1st Overall, Best Sustainable Travel Hack
-- 2022 Skills Ontario Coding Competition, 1st --- 2021 Skills Ontario Coding Competition, 2nd
+#section(title: "Technical Skills")
+Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy, PostgreSQL,
+MySQL, MongoDB, Firebase, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
+JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
+GSAP (GreenSock), Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema,
+OpenAPI, Swagger, Zod, Drizzle, Diesel, PyTorch, TensorFlow, Keras, Gerrit,
+Jira, Confluence, Skia, wgpu, OpenStack, Docker, Unity, Bevy, Git, Gerrit,
+Ansible
 
