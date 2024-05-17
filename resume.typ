@@ -41,7 +41,7 @@
 
 #header(text(fill: white, [#name #space(h: 1em) #about]))
 
-#space(h: 0.3in)
+#space(h: 0.4in)
 
 #section(title: "Education", right: [Looking for a *January 2025*, 4-month position])
 
@@ -121,11 +121,15 @@ _Expected 2026_
 )
 
 #section(title: "Technical Skills")
-Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy, PostgreSQL,
-MySQL, MongoDB, Firebase, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
-JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
-GSAP (GreenSock), Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema,
-OpenAPI, Swagger, Zod, Drizzle, Diesel, PyTorch, TensorFlow, Keras, Gerrit,
-Jira, Confluence, Skia, wgpu, OpenStack, Docker, Unity, Bevy, Git, Gerrit,
-Ansible
-
+#text(
+	size: 10pt,
+	[
+		Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy, PostgreSQL,
+		MySQL, MongoDB, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
+		JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
+		Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema, OpenAPI, Swagger,
+		Zod, Drizzle, Diesel, PyTorch, TensorFlow, Keras, Gerrit, Jira, Confluence,
+		Skia, OpenStack, Docker, Unity, Bevy, Git, Gerrit, Ansible, AWS, Azure, GCP,
+		Kubernetes, Terraform, Prometheus, Grafana
+	]
+)
