@@ -3,7 +3,7 @@
 #let config = toml("config.toml")
 
 // document setup
-#set page(paper: "us-letter", margin: 0.4in)
+#set page(paper: "us-letter", margin: (x: 0.4in, top: 0.4in, bottom: 0.3in))
 #set document(
 	title: config.at("title", default: config.name + "'s Resume"),
 	author: config.at("author", default: config.name),
@@ -41,7 +41,7 @@
 
 #header(text(fill: white, [#name #space(h: 1em) #about]))
 
-#space(h: 0.4in)
+#space(h: 0.3in)
 
 #section(title: "Education", right: [Looking for a *January 2025*, 4-month position])
 
@@ -87,36 +87,36 @@ _Expected 2026_
 #section(title: "Projects")
 
 #project(
-	title: "StatPixel",
+	title: "Statistical Tracking Platform",
 	github: "statpixel-rs/statpixel",
 	tags: ("Rust", "PostgreSQL", "Redis", "Skia", "WGSL"),
 	achievements: (
 		[Cultivated a community of over 10,000 users to track and visualize their statistics in real time.],
 		[Deployed an *image generation* pipeline with *Skia*, generating 500+ daily personalized images.],
 		[Organized 2,000+ leaderboards with *Redis* to efficiently retrieve top performers in 2-10 milliseconds.],
-		[Leveraged *code generation* to reduce boilerplate by 90% and improve performance.]
+		[Leveraged *code generation* to reduce boilerplate by 90% and improve performance.],
 	)
 )
 
 #project(
-	title: "Basket",
-	github: "matteopolak/basket",
-	tags: ("Rust", "HTTP"),
+	title: "Programming Language",
+	github: "matteopolak/quasi",
+	tags: ("Rust", "WebAssembly", "Interpreter"),
 	achievements: (
-		[Implemented a parser for the *HTTP/1.1* protocol in *Rust* with support for streaming data.],
-		[Architected an HTTP client from scratch using *TCP* sockets, exposing a clean public API.],
-		[Developed a *multi-threaded HTTP server* with built-in routing support and best-of-class performance.]
+		[Developed an interpreter, lexer, and parser with an execution rate of 1,000,000 instructions per second.],
+		[Implemented a *WebAssembly* backend to run the interpreter in the browser, improving user reach by 200%.],
+		[Architected a release workflow to automate the deployment of new versions with *GitHub Actions*.],
 	)
 )
 
 #project(
-	title: "Crave",
+	title: "Recipe-sharing Platform",
 	github: "matteopolak/crave",
 	tags: ("Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"),
 	achievements: (
 		[Launched a *recipe-sharing* platform with 25 users that creates personalized recommendations.],
 		[Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank 100,000 recipes.],
-		[Designed a user-friendly interface with *DaisyUI* and *TailwindCSS*, improving CTR by 40%.]
+		[Designed a user-friendly interface with *DaisyUI* and *TailwindCSS*, improving CTR by 40%.],
 	)
 )
 
@@ -128,8 +128,8 @@ _Expected 2026_
 		MySQL, MongoDB, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
 		JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
 		Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema, OpenAPI, Swagger,
-		Zod, Drizzle, Diesel, PyTorch, TensorFlow, Keras, Gerrit, Jira, Confluence,
+		Zod, Drizzle, Diesel, Protobuf, PyTorch, TensorFlow, Keras, Gerrit, Jira, Confluence,
 		Skia, OpenStack, Docker, Unity, Bevy, Git, Gerrit, Ansible, AWS, Azure, GCP,
-		Kubernetes, Terraform, Prometheus, Grafana
+		Kubernetes, Terraform, Prometheus, Grafana, OpenTelemetry, Telegraf
 	]
 )
