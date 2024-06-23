@@ -87,7 +87,7 @@ _Expected 2026_
 #section(title: "Projects")
 
 #project(
-	title: "Statistical Tracking Platform",
+	title: "StatPixel",
 	github: "statpixel-rs/statpixel",
 	tags: ("Rust", "PostgreSQL", "Redis", "Skia", "WGSL"),
 	achievements: (
@@ -99,13 +99,13 @@ _Expected 2026_
 )
 
 #project(
-	title: "Programming Language",
-	github: "matteopolak/quasi",
-	tags: ("Rust", "WebAssembly", "Interpreter"),
+	title: "3D Game Engine",
+	github: "matteopolak/ira",
+	tags: ("Rust", "WGSL", "WebGPU", "TCP"),
 	achievements: (
-		[Developed an interpreter, lexer, and parser with an execution rate of 1,000,000 instructions per second.],
-		[Implemented a *WebAssembly* backend to run the interpreter in the browser, improving user reach by 200%.],
-		[Architected a release workflow to automate the deployment of new versions with *GitHub Actions*.],
+		[Developed a *3D game engine* with a custom rendering engine, supporting 10,000,000+ vertices at 60 FPS.],
+		[Implemented a lock-free communication layer with *TCP* with a throughput of 1.5 GiB/s.],
+		[Integrated a physics engine to simulate realistic interactions between 100,000+ objects in real time.],
 	)
 )
 
