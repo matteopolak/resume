@@ -77,6 +77,7 @@ _Expected 2026_
 )
 
 #section(title: "Achievements")
+- Open Source Contributor to #link("https://github.com/sveltejs/svelte", "Svelte"), #link("https://github.com/sveltejs/kit", "SvelteKit"), #link("https://github.com/lucia-auth/lucia", "Lucia"), #link("https://github.com/SoftbearStudios/bitcode", "Bitcode"), #link("https://github.com/plotters-rs/plotters", "Plotters"), #link("https://github.com/oven-sh/bun", "Bun")
 - 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
 	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
 - 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
@@ -98,7 +99,7 @@ _Expected 2026_
 )
 
 #project(
-	title: "Image-to-ingredients Model",
+	title: "Image-to-ingredients AI",
 	github: "matteopolak/grill",
 	tags: ("PyTorch", "Data Cleaning", "Fine-tuning", "EfficientNet"),
 	achievements: (
@@ -113,7 +114,7 @@ _Expected 2026_
 	github: "matteopolak/crave",
 	tags: ("Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"),
 	achievements: (
-		[Launched a *recipe-sharing* platform with 25 users that creates personalized recommendations.],
+		[Launched a *recipe-sharing* platform with 100+ users that creates personalized recommendations.],
 		[Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank 100,000 recipes.],
 		[Designed a user-friendly interface with *DaisyUI* and *TailwindCSS*, improving CTR by 40%.],
 	)
