@@ -87,18 +87,6 @@ _Expected 2026_
 #section(title: "Projects")
 
 #project(
-	title: "StatPixel",
-	github: "statpixel-rs/statpixel",
-	tags: ("Rust", "PostgreSQL", "Redis", "Skia", "WGSL"),
-	achievements: (
-		[Cultivated a community of over 10,000 users to track and visualize their statistics in real time.],
-		[Deployed an *image generation* pipeline with *Skia*, generating 500+ daily personalized images.],
-		[Organized 2,000+ leaderboards with *Redis* to efficiently retrieve top performers in 2-10 milliseconds.],
-		[Leveraged *code generation* to reduce boilerplate by 90% and improve performance.],
-	)
-)
-
-#project(
 	title: "3D Game Engine",
 	github: "matteopolak/ira",
 	tags: ("Rust", "WGSL", "WebGPU", "TCP"),
@@ -106,6 +94,17 @@ _Expected 2026_
 		[Developed a *3D game engine* with a custom rendering engine, supporting 10,000,000+ vertices at 60 FPS.],
 		[Implemented a lock-free communication layer with *TCP* with a throughput of 1.5 GiB/s.],
 		[Integrated a physics engine to simulate realistic interactions between 100,000+ objects in real time.],
+	)
+)
+
+#project(
+	title: "Image-to-ingredients Model",
+	github: "matteopolak/grill",
+	tags: ("PyTorch", "Data Cleaning", "Fine-tuning", "EfficientNet"),
+	achievements: (
+		[Trained a *PyTorch* model to predict ingredients from images with 90%+ accuracy.],
+		[Cleaned and preprocessed a dataset of 1,000,000 images and 15,000 ingredients.],
+		[Fine-tuned an *EfficientNet* model to achieve a 30% improvement in accuracy.],
 	)
 )
 
