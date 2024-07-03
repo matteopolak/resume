@@ -47,7 +47,7 @@
 	width: 100%,
 	fill: rgb(38, 38, 38),
 	// we want to push the content below it down
-	inset: (bottom: padding),
+	inset: (bottom: padding - 0.1in),
 	// but since this is at the top, we want to fill
 	// the margin with the background of the box
 	outset: (x: padding, top: padding),

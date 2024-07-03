@@ -39,11 +39,17 @@
 	#link("https://linkedin.com/in/" + config.linkedin, "linkedin/" + config.linkedin)
 ]
 
-#header(text(fill: white, [#name #space(h: 1em) #about]))
+#header(text(fill: white, [
+	#name
+	#space(h: 1em)
+	#about
+	#space(h: 1.5em)
+	#text(fill: rgb(180, 180, 180), [Looking for a *January 2025*, 4-month position])
+]))
 
 #space(h: 0.3in)
 
-#section(title: "Education", right: [Looking for a *January 2025*, 4-month position])
+#section(title: "Education")
 
 *Co-op Honours Bachelor of Computer Science*, University of Ottawa
 #h(1fr)
@@ -57,22 +63,22 @@ _Expected 2026_
 	location: "Ottawa, ON (Remote)",
 	start: datetime(year: 2023, month: 5, day: 1),
 	achievements: (
-		[Authored a code ownership and test management API with *Express.js*, *Zod*, *Node.js*, and *MongoDB* that improved workflow efficiency and test coverage by 25%.],
-		[Upgraded and improved a computing management tool with *Python*, *OpenStack*, and *Ansible* that reduced downtime and failures by 40%.],
+		[Improved a code ownership and test management API with *Express.js*, *Zod*, *Node.js*, and *MongoDB* that improved workflow efficiency and test coverage by 80%.],
+		[Migrated a legacy codebase to Python 3.9, reducing bugs and maintenance time by 50%.],
 		[Released a full-stack computing resource booking platform with *Nuxt*, *PostgreSQL*, and *tRPC* that reduced order wait times by 95%.],
-		[Designed and implemented a *Rust* microservice to categorize and assign errors, improving MTTR by 30%.]
+		[Designed, implemented, tested, and deployed a *Rust* microservice to categorize errors and assign tickets, improving MTTR by 30%.]
 	)
 )
 
 #job(
 	title: "STEM Instructor",
 	company: "RoboEDU",
-	location: "North York, ON (Remote)",
+	location: "North York, ON",
 	start: datetime(year: 2022, month: 6, day: 1),
 	end: datetime(year: 2022, month: 08, day: 1),
 	achievements: (
-		[Designed engaging course material and led 10-20 students through *Python* and Scratch courses.],
-		[Devised a teaching plan that increased student productivity and engagement by 20%.]
+		[Developed a curriculum for a *Python* programming course for 100+ students aged 8-12.],
+		[Instructed students in Python and *Scratch* programming, improving their problem-solving skills by 40%.],
 	)
 )
 
@@ -104,7 +110,7 @@ _Expected 2026_
 	tags: ("PyTorch", "Data Cleaning", "Fine-tuning", "EfficientNet"),
 	achievements: (
 		[Trained a *PyTorch* model to predict ingredients from images with 90%+ accuracy.],
-		[Cleaned and preprocessed a dataset of 1,000,000 images and 15,000 ingredients.],
+		[Cleaned and preprocessed a dataset of 1,000,000 images and 15,000 ingredients with *Pandas* (then *Polars*).],
 		[Fine-tuned an *EfficientNet* model to achieve a 30% improvement in accuracy.],
 	)
 )
@@ -124,12 +130,19 @@ _Expected 2026_
 #text(
 	size: 10pt,
 	[
-		Rust, TypeScript, Go, Python, Java, C++, C, C\#, Groovy, PostgreSQL,
-		MySQL, MongoDB, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
-		JavaScript, HTML, CSS, Svelte, Vue, React, SvelteKit, Nuxt, Next.js,
-		Flutter, Express.js, Fastify, Axum, tRPC, JSONSchema, OpenAPI, Swagger,
-		Zod, Drizzle, Diesel, Protobuf, PyTorch, TensorFlow, Keras, Gerrit, Jira, Confluence,
-		Skia, OpenStack, Docker, Unity, Bevy, Git, Gerrit, Ansible, AWS, Azure, GCP,
-		Kubernetes, Terraform, Prometheus, Grafana, OpenTelemetry, Telegraf
+		Rust, TypeScript, Go, Python, C++, C, C\#, Groovy, JavaScript, HTML, CSS
+		PostgreSQL, MongoDB, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
+		Svelte, Vue, React, SvelteKit, Nuxt, Next.js, Flutter,
+		Express.js, Axum, tRPC, OpenAPI, Swagger,
+		Zod, Drizzle, Diesel, Protobuf,
+		PyTorch, TensorFlow, Keras,
+		Gerrit, Jira, Confluence,
+		Skia,
+		Unity, Bevy,
+		Git, Gerrit, Ansible,
+		AWS, Azure, GCP,
+		OpenStack, Docker, Kubernetes, Terraform,
+		Prometheus, Grafana, OpenTelemetry, Telegraf
 	]
 )
+
