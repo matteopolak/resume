@@ -1,3 +1,5 @@
+#let config = toml("config.toml")
+
 // Create a consistent vertical spacing
 #let space(h: 0.6em) = v(h, weak: true)
 
@@ -21,6 +23,10 @@
 
 // Format a project entry
 #let project(title: "", github: "", tags: (), achievements: ()) = {
+	if not config.projects.enabled.contains(github) {
+		return []
+	}
+
 	[
 		#link("https://github.com/" + github, title)
 		--

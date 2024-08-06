@@ -6,3 +6,18 @@ website = "matteopolak.com"
 github = "matteopolak"
 linkedin = "matteo-polak"
 
+# hot-swap out projects based on the job description
+# exactly 3 should be enabled at a time
+[projects]
+enabled = [
+	"matteopolak/ira",
+	"matteopolak/crave",
+	#"matteopolak/grill",
+	#"matteopolak/quasi",
+	#"matteopolak/basket",
+	#"matteopolak/miner",
+	#"matteopolak/jukebox",
+	"statpixel-rs/statpixel",
+	#"matteopolak/noteboard",
+]
+

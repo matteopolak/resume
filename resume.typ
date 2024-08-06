@@ -3,7 +3,7 @@
 #let config = toml("config.toml")
 
 // document setup
-#set page(paper: "us-letter", margin: (x: 0.4in, top: 0.4in, bottom: 0.3in))
+#set page(paper: "us-letter", margin: (x: 0.3in, top: 0.3in, bottom: 0.15in))
 #set document(
 	title: config.at("title", default: config.name + "'s Resume"),
 	author: config.at("author", default: config.name),
@@ -25,7 +25,7 @@
 ]
 
 #let name = text(
-	size: 45pt,
+	size: 35pt,
 	font: "jersey 10",
 	weight: "bold",
 	config.name
@@ -44,16 +44,30 @@
 	#space(h: 1em)
 	#about
 	#space(h: 1.5em)
-	#text(fill: rgb(180, 180, 180), [Looking for a *January 2025*, 4 or 8-month position])
+	#text(fill: rgb(200, 200, 200), [3#super[rd] year Computer Science student looking for a *January 2025*, 4 or 8-month position])
 ]))
 
 #space(h: 0.3in)
 
 #section(title: "Education")
 
-*Co-op Honours Bachelor of Computer Science*, University of Ottawa
+*Co-op Honours Bachelor of Computer Science*, University of Ottawa, 9.55/10 CGPA
 #h(1fr)
-_Expected 2026_
+_Expected December 2026_
+
+#section(title: "Technical Skills")
+#text(
+	size: 10pt,
+	[
+		*Languages/Frameworks*: Rust, TypeScript, Go, Python, C++, C, C\#, Groovy, JavaScript,
+		Svelte, Vue, React, SvelteKit, Nuxt, Next.js, Flutter, Express.js, Django, Flask, OpenAPI,
+		Swagger, Protobuf, PyTorch
+
+		*Tools*: PostgreSQL, MongoDB, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
+		Gerrit, Skia, Unity, Git, Gerrit, Ansible, AWS, Azure, GCP,
+		OpenStack, Docker, Kubernetes, Terraform, Prometheus, Grafana, OpenTelemetry, Telegraf
+	]
+)
 
 #section(title: "Professional Experience")
 
@@ -63,10 +77,10 @@ _Expected 2026_
 	location: "Ottawa, ON (Remote)",
 	start: datetime(year: 2023, month: 5, day: 1),
 	achievements: (
-		[Improved a code ownership and test management API with *Express.js*, *Zod*, *Node.js*, and *MongoDB* that improved workflow efficiency and test coverage by 80%.],
-		[Migrated a legacy codebase to Python 3.9, reducing bugs and maintenance time by 50%.],
-		[Released a full-stack computing resource booking platform with *Nuxt*, *PostgreSQL*, and *tRPC* that reduced order wait times by 95%.],
-		[Designed, implemented, tested, and deployed a *Rust* microservice to categorize errors and assign tickets, improving MTTR by 30%.]
+		[Created a code ownership and test management solution with *Express.js*, *MongoDB*, and *InfluxDB* (for logging) that improved workflow efficiency and test coverage by 80%, among other improvements.],
+		[Released a full-stack computing resource booking platform with *Nuxt*, *PostgreSQL*, and *tRPC* that reduced order wait times by 99%+ (from days to minutes).],
+		[Designed, implemented, tested, deployed, and maintained a *Rust* microservice to categorize errors and assign tickets, improving MTTR (Mean time to repair) by 30%.],
+		[Migrated a legacy codebase to Python 3.9, fixing numerous bugs and reducing maintenance time by 50%.],
 	)
 )
 
@@ -78,29 +92,31 @@ _Expected 2026_
 	end: datetime(year: 2022, month: 08, day: 1),
 	achievements: (
 		[Developed a curriculum for a *Python* programming course for 100+ students aged 8-12.],
-		[Instructed students in Python and *Scratch* programming, improving their problem-solving skills by 40%.],
+		[Instructed students in Python programming, improving their problem-solving skills and computational thinking.],
 	)
 )
-
-#section(title: "Achievements")
-- Open Source Contributor to #link("https://github.com/sveltejs/svelte", "Svelte"), #link("https://github.com/sveltejs/kit", "SvelteKit"), #link("https://github.com/lucia-auth/lucia", "Lucia"), #link("https://github.com/SoftbearStudios/bitcode", "Bitcode"), #link("https://github.com/plotters-rs/plotters", "Plotters"), #link("https://github.com/oven-sh/bun", "Bun")
-- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
-	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
-- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
-- 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
-	1st Overall, Best Sustainable Travel Hack
-- 2022 Skills Ontario Coding Competition, 1st --- 2021 Skills Ontario Coding Competition, 2nd
 
 #section(title: "Projects")
 
 #project(
 	title: "3D Game Engine",
 	github: "matteopolak/ira",
-	tags: ("Rust", "WGSL", "WebGPU", "TCP"),
+	tags: ("Rust", "WGSL", "wgpu", "TCP"),
 	achievements: (
 		[Developed a *3D game engine* with a custom rendering engine, supporting 10,000,000+ vertices at 60 FPS.],
 		[Implemented a lock-free communication layer with *TCP* with a throughput of 1.5 GiB/s.],
 		[Integrated a physics engine to simulate realistic interactions between 100,000+ objects in real time.],
+	)
+)
+
+#project(
+	title: "Recipe-sharing Platform",
+	github: "matteopolak/crave",
+	tags: ("Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"),
+	achievements: (
+		[Launched a *recipe-sharing* platform with 100+ users that creates personalized recommendations.],
+		[Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank 100,000 recipes.],
+		[Designed a user-friendly interface with *DaisyUI* and *TailwindCSS*, improving CTR by 40%.],
 	)
 )
 
@@ -116,33 +132,79 @@ _Expected 2026_
 )
 
 #project(
-	title: "Recipe-sharing Platform",
-	github: "matteopolak/crave",
-	tags: ("Svelte", "TypeScript", "PostgreSQL", "tRPC", "Drizzle", "PyTorch"),
+	title: "Programming Language",
+	github: "matteopolak/quasi",
+	tags: ("Rust", "WebAssembly"),
 	achievements: (
-		[Launched a *recipe-sharing* platform with 100+ users that creates personalized recommendations.],
-		[Integrated a text embedding model with *PyTorch* and *Flask* to vectorize and rank 100,000 recipes.],
-		[Designed a user-friendly interface with *DaisyUI* and *TailwindCSS*, improving CTR by 40%.],
+		[Developed a *programming language* with a custom lexer, parser, and interpreter in *Rust*.],
+		[Compiled the language to *WebAssembly* and integrated it into an interactive web-based layout.],
+		[Implemented clean error reporting and helpful diagnostics, improving developer experience significantly.],
 	)
 )
 
-#section(title: "Technical Skills")
-#text(
-	size: 10pt,
-	[
-		Rust, TypeScript, Go, Python, C++, C, C\#, Groovy, JavaScript, HTML, CSS
-		PostgreSQL, MongoDB, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
-		Svelte, Vue, React, SvelteKit, Nuxt, Next.js, Flutter,
-		Express.js, Axum, tRPC, OpenAPI, Swagger,
-		Zod, Drizzle, Diesel, Protobuf,
-		PyTorch, TensorFlow, Keras,
-		Gerrit, Jira, Confluence,
-		Skia,
-		Unity, Bevy,
-		Git, Gerrit, Ansible,
-		AWS, Azure, GCP,
-		OpenStack, Docker, Kubernetes, Terraform,
-		Prometheus, Grafana, OpenTelemetry, Telegraf
-	]
+#project(
+	title: "HTTP Client & Server",
+	github: "matteopolak/basket",
+	tags: ("Rust", "HTTP/1.1"),
+	achievements: (
+		[Created an *HTTP client* and *server* with a custom parser and serializer in *Rust*.],
+		[Implemented JSON and XML serialization and deserialization, supporting 100,000+ requests per second.],
+		[Optimized the developer experience with a clean layout and easy configuration options.],
+	)
 )
 
+#project(
+	title: "Bitcoin Miner",
+	github: "matteopolak/miner",
+	tags: ("Rust", "SHA-256", "Proof of Work", "wgpu"),
+	achievements: (
+		[Developed a *Bitcoin miner* with a custom SHA-256 implementation in *Rust*.],
+		[Implemented a proof-of-work algorithm to mine Bitcoin blocks with a hash rate of 1.5 MH/s.],
+		[Optimized the mining process with a *GPU shader* and parallel processing, achieving a 30% speedup.],
+	)
+)
+
+#project(
+	title: "Discord Jukebox",
+	github: "matteopolak/jukebox",
+	tags: ("TypeScript", "Discord.js", "YouTube API", "Spotify API", "Apple Music API"),
+	achievements: (
+		[Created a *Discord bot* that plays music from YouTube, Spotify, and Apple Music in voice channels.],
+		[Implemented a novel interface with buttons and dropdowns to control playback and audio filtering.],
+		[Integrated YouTube and Spotify recommendations to suggest songs based on user preferences.],
+	)
+)
+
+#project(
+	title: "Statistics Service",
+	github: "statpixel-rs/statpixel",
+	tags: ("Rust", "PostgreSQL", "Redis", "wgpu"),
+	achievements: (
+		[Developed a *statistics service* for Hypixel in *Rust*, used by 1,000+ players daily.],
+		[Implemented a rendering engine with *wgpu* to generate charts and 3D models of players in real time.],
+		[Optimized the service with *Redis* as a cache layer, supporting 10,000+ requests per second.],
+	)
+)
+
+#project(
+	title: "Collaborative Art Board",
+	github: "matteopolak/noteboard",
+	tags: ("Svelte", "WebSockets", "Canvas API"),
+	achievements: (
+		[Launched a *collaborative art board* with real-time drawing and chat functionality for 100+ users.],
+		[Implemented a WebSocket server to synchronize drawing events between clients with sub-millisecond latency.],
+		[Designed a user-friendly interface with *Svelte* and *TailwindCSS*, improving user engagement by 50%.],
+	)
+)
+
+#section(title: "Achievements")
+- Open Source Contributor to #link("https://github.com/sveltejs/svelte", "Svelte"), #link("https://github.com/sveltejs/kit", "SvelteKit"), #link("https://github.com/lucia-auth/lucia", "Lucia"), #link("https://github.com/SoftbearStudios/bitcode", "Bitcode"), #link("https://github.com/plotters-rs/plotters", "Plotters"), #link("https://github.com/oven-sh/bun", "Bun")
+- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
+	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
+- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
+- 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
+	1st Overall, Best Sustainable Travel Hack
+- 2022 Skills Ontario Coding Competition, 1st --- 2021 Skills Ontario Coding Competition, 2nd
+
+#space(h: 0.15in)
+#text(size: 10pt, align(center, "References available upon request."))
