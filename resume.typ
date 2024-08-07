@@ -59,7 +59,7 @@ _Expected December 2026_
 #text(
 	size: 10pt,
 	[
-		*Languages/Frameworks*: Rust, TypeScript, Go, Python, C++, C, C\#, Groovy, JavaScript,
+		*Languages/Libraries*: Rust, TypeScript, Go, Python, C++, C, C\#, Groovy, JavaScript,
 		Svelte, Vue, React, SvelteKit, Nuxt, Next.js, Flutter, Express.js, Django, Flask, OpenAPI,
 		Swagger, Protobuf, PyTorch
 
