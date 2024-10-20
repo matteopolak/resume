@@ -49,7 +49,7 @@
 #header(
 	text(fill: white, stack(dir: ltr, [
 			#name \
-			#text(size: 10pt, "Computer Science student")
+			#text(size: 10pt, [3#super[rd] year Computer Science student])
 		],
 		align(right, about)
 	)),
@@ -58,33 +58,17 @@
 
 #space(h: 0.3in)
 
-#text(
-	weight: "semibold",
-	size: 12pt,
-	[
-		John Smith \
-		Hiring Manager \
-		Acme Corp \
-		123 Main St \
-		Springfield, IL 62701
-	]
-)
+Hey Alison,
 
-#line(length: 100%)
+I am writing to express my interest in the Co-op Software Developer position at Cliniconex. As a third-year Computer Science student at the University of Ottawa, with a focus on full-stack development and hands-on experience in various technologies, I am excited about the opportunity to contribute to your team and help advance healthcare communication solutions.
 
-Dear Hiring Manager,
+At Ciena, I developed and maintained a variety of full-stack projects, including a resource booking platform that reduced wait times by over 99%. I have experience building and integrating RESTful APIs, utilizing technologies such as JavaScript, PostgreSQL, and MongoDB, and I am confident that my skills in both front-end and back-end development will allow me to make meaningful contributions to the projects at Cliniconex.
 
-#lorem(50)
+I am particularly drawn to the collaborative culture and innovative healthcare solutions that Cliniconex provides. The opportunity to work in a cross-functional team, design software-as-a-service solutions, and directly impact patient care is extremely motivating. I am eager to apply my technical skills, learn from experienced developers, and contribute to the software solutions that improve communication and collaboration within healthcare environments.
 
-#lorem(75)
+I am confident that my experience in software development, combined with my enthusiasm for learning and problem-solving, will make me a strong addition to your team. I look forward to the opportunity to contribute to Cliniconex and further develop my skills.
 
-#lorem(40)
-
-#lorem(75)
-
-#lorem(50)
-
-Thank you for your time and consideration. I look forward to hearing from you soon.
+Thank you for considering my application. I am happy to provide any additional information or references as needed, just let me know!
 
 #line(length: 100%)
 

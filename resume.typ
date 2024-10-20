@@ -51,9 +51,9 @@
 
 #section(title: "Education")
 
-*Co-op Honours Bachelor of Computer Science*, University of Ottawa, 9.55/10 CGPA
+*Honours Bachelor of Computer Science*, University of Ottawa, 9.55/10 CGPA
 #h(1fr)
-_Expected December 2026_
+_September 2022 --- December 2026_
 
 #section(title: "Technical Skills")
 #text(
@@ -63,9 +63,9 @@ _Expected December 2026_
 		Svelte, Vue, React, SvelteKit, Nuxt, Next.js, Flutter, Express.js, Django, Flask, OpenAPI,
 		Swagger, Protobuf, PyTorch
 
-		*Tools*: PostgreSQL, MongoDB, Redis, Memcached, Qdrant, InfluxDB, TimescaleDB,
-		Gerrit, Skia, Unity, Git, Gerrit, Ansible, AWS, Azure, GCP,
-		OpenStack, Docker, Kubernetes, Terraform, Prometheus, Grafana, OpenTelemetry, Telegraf
+		*Tools*: PostgreSQL, MySQL, MongoDB, Redis, InfluxDB, TimescaleDB,
+		Gerrit, Skia, Unity, Git, Ansible, AWS,
+		OpenStack, Docker, Prometheus, Grafana, OpenTelemetry, Telegraf
 	]
 )
 
@@ -181,7 +181,7 @@ _Expected December 2026_
 	tags: ("Rust", "PostgreSQL", "Redis", "wgpu"),
 	achievements: (
 		[Developed a *statistics service* for Hypixel in *Rust*, used by 1,000+ players daily.],
-		[Implemented a rendering engine with *wgpu* to generate charts and 3D models of players in real time.],
+		[Implemented a GPU rendering engine with *wgpu* to generate charts and 3D models of players in real time.],
 		[Optimized the service with *Redis* as a cache layer, supporting 10,000+ requests per second.],
 	)
 )
@@ -199,12 +199,9 @@ _Expected December 2026_
 
 #section(title: "Achievements")
 - Open Source Contributor to #link("https://github.com/sveltejs/svelte", "Svelte"), #link("https://github.com/sveltejs/kit", "SvelteKit"), #link("https://github.com/lucia-auth/lucia", "Lucia"), #link("https://github.com/SoftbearStudios/bitcode", "Bitcode"), #link("https://github.com/plotters-rs/plotters", "Plotters"), #link("https://github.com/oven-sh/bun", "Bun")
+- 2024 #link("https://hack-the-hill-ii.devpost.com", "Hack the Hill II") Hackathon, 1st
 - 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
-	1st (Ciena track), Best Developer Experience, Best Cybersecurity Project
-- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st Overall
+	1st, Best Developer Experience, Best Cybersecurity Project
+- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, 1st
 - 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
-	1st Overall, Best Sustainable Travel Hack
-- 2022 Skills Ontario Coding Competition, 1st --- 2021 Skills Ontario Coding Competition, 2nd
-
-#space(h: 0.15in)
-#text(size: 10pt, align(center, "References available upon request."))
+	1st, Best Sustainable Travel Hack
