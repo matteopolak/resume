@@ -44,7 +44,7 @@
 	#space(h: 1em)
 	#about
 	#space(h: 1.5em)
-	#text(fill: rgb(200, 200, 200), [3#super[rd] year Computer Science student looking for a *January 2025*, 4 or 8-month position])
+	#text(fill: rgb(200, 200, 200), [3#super[rd] year Computer Science student looking for a *May 2025*, 4 or 8-month position])
 ]))
 
 #space(h: 0.3in)
