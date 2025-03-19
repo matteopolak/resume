@@ -12,12 +12,13 @@ linkedin = "matteo-polak"
 enabled = [
 	"matteopolak/ira",
 	"matteopolak/crave",
+	"matteopolak/owl",
 	#"matteopolak/grill",
 	#"matteopolak/quasi",
 	#"matteopolak/basket",
 	#"matteopolak/miner",
 	#"matteopolak/jukebox",
-	"statpixel-rs/statpixel",
+	#"statpixel-rs/statpixel",
 	#"matteopolak/noteboard",
 ]
 
