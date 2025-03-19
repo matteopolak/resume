@@ -17,7 +17,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: typst-community/setup-typst@v3
+      - uses: typst-community/setup-typst@v4
         with:
           cache-dependency-path: requirements.typ
       - run: typst compile resume.typ Matthew_Polak_Resume.pdf --pdf-standard a-2b
