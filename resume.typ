@@ -58,27 +58,13 @@
   ),
 )
 
-#space(h: 0.3in)
+#space(h: 0.2in)
 
 #section(title: "Education")
 
 *Honours Bachelor of Computer Science*, University of Ottawa, 9.64/10 CGPA
 #h(1fr)
 _September 2022 --- December 2026_
-
-#section(title: "Technical Skills")
-#text(
-  size: 10pt,
-  [
-    *Languages/Libraries*: Rust, TypeScript, Go, Python, C++, C, Java, JavaScript,
-    Svelte, Vue, React, SvelteKit, Express.js, Django, Flask, OpenAPI,
-    Swagger, Protobuf, PyTorch
-
-    *Tools*: PostgreSQL, MySQL, MongoDB, Redis, InfluxDB, TimescaleDB,
-    Gerrit, Unity, Godot, Git, Ansible, AWS, GCP,
-    OpenStack, Docker, Prometheus, Grafana, OpenTelemetry, Telegraf
-  ],
-)
 
 #section(title: "Professional Experience")
 
@@ -88,6 +74,7 @@ _September 2022 --- December 2026_
   location: "Ottawa, ON",
   start: datetime(year: 2025, month: 1, day: 6),
   achievements: (
+    [Wrote various JUnit, Cypress, and Jest tests, increasing test coverage across multiple projects.],
     [Added rate-limiting to a customer-facing API with *Java* and *Spring Boot*.],
     [Performed benchmarking and profiling on a messaging system, reducing memory and CPU usage by 60%.],
     [Integrated OpenAPI tooling and an associated CI/CD pipeline, improving documentation by 15%.],
@@ -119,6 +106,14 @@ _September 2022 --- December 2026_
     [Instructed students in Python programming, improving their problem-solving skills and computational thinking.],
   ),
 )
+
+#section(title: "Achievements")
+- Open Source Contributor to #link("https://github.com/sveltejs/svelte", "Svelte"), #link("https://github.com/sveltejs/kit", "SvelteKit"), #link("https://github.com/lucia-auth/lucia", "Lucia"), #link("https://github.com/SoftbearStudios/bitcode", "Bitcode"), #link("https://github.com/plotters-rs/plotters", "Plotters"), #link("https://github.com/oven-sh/bun", "Bun")
+- 2025 #link("https://dorahacks.io/hackathon/uottahack7", "uOttaHack 7") Hackathon, *1st*
+- 2024 #link("https://hack-the-hill-ii.devpost.com", "Hack the Hill II") Hackathon, *1st*, 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
+  *1st*
+- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, *1st*, 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
+  *1st*
 
 #section(title: "Projects")
 
@@ -235,10 +230,16 @@ _September 2022 --- December 2026_
   ),
 )
 
-#section(title: "Achievements")
-- Open Source Contributor to #link("https://github.com/sveltejs/svelte", "Svelte"), #link("https://github.com/sveltejs/kit", "SvelteKit"), #link("https://github.com/lucia-auth/lucia", "Lucia"), #link("https://github.com/SoftbearStudios/bitcode", "Bitcode"), #link("https://github.com/plotters-rs/plotters", "Plotters"), #link("https://github.com/oven-sh/bun", "Bun")
-- 2025 #link("https://dorahacks.io/hackathon/uottahack7", "uOttaHack 7") Hackathon, *1st*, 2024 #link("https://hack-the-hill-ii.devpost.com", "Hack the Hill II") Hackathon, *1st*
-- 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
-  *1st*, Best Developer Experience, Best Cybersecurity Project
-- 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, *1st*, 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,
-  *1st*, Best Sustainable Travel Hack
+#section(title: "Technical Skills")
+#text(
+  size: 10pt,
+  [
+    *Languages/Libraries*: Rust, TypeScript, Go, Python, C++, C, Java, JavaScript,
+    Svelte, Vue, React, SvelteKit, Express.js, Django, Flask, OpenAPI,
+    Swagger, Protobuf, PyTorch
+
+    *Tools*: PostgreSQL, MySQL, MongoDB, Redis, InfluxDB, TimescaleDB,
+    Gerrit, Unity, Godot, Git, Ansible, AWS, GCP,
+    OpenStack, Docker, Prometheus, Grafana, OpenTelemetry, Telegraf
+  ],
+)

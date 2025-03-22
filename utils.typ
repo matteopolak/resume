@@ -76,7 +76,7 @@
 }
 
 // Create a coloured header with some centered content
-#let header(content, padding: 0.4in, alignment: center + horizon) = box(
+#let header(content, padding: 0.3in, alignment: center + horizon) = box(
   width: 100%,
   fill: rgb(38, 38, 38),
   // we want to push the content below it down
