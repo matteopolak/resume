@@ -8,6 +8,7 @@
 
 // Format a job entry
 #let job(
+  id: "",
   title: "",
   company: "",
   location: "",
@@ -15,6 +16,10 @@
   end: "Present",
   achievements: (),
 ) = {
+  if not config.jobs.enabled.contains(id) {
+    return []
+  }
+
   let format = "[month repr:long] [year]"
   let end = if type(end) == str [#end] else [#end.display(format)]
 

@@ -6,6 +6,14 @@ website = "matteopolak.com"
 github = "matteopolak"
 linkedin = "matteo-polak"
 
+[jobs]
+enabled = [
+	"solace-swe",
+	"ciena-swe",
+	"ignite-freelance",
+	#"roboedu-instructor",
+]
+
 # hot-swap out projects based on the job description
 # exactly 3 should be enabled at a time
 [projects]

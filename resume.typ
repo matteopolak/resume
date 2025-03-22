@@ -52,7 +52,7 @@
       #space(h: 1.5em)
       #text(
         fill: rgb(200, 200, 200),
-        [3#super[rd] year Computer Science student looking for a *May 2025*, 4 or 8-month position],
+        [3#super[rd] year Computer Science student looking for a *September 2025*, 4 or 8-month position],
       )
     ],
   ),
@@ -69,6 +69,7 @@ _September 2022 --- December 2026_
 #section(title: "Professional Experience")
 
 #job(
+  id: "solace-swe",
   title: "Software Engineer",
   company: "Solace",
   location: "Ottawa, ON",
@@ -82,6 +83,7 @@ _September 2022 --- December 2026_
 )
 
 #job(
+  id: "ciena-swe",
   title: "Software Engineer",
   company: "Ciena",
   location: "Ottawa, ON (Remote)",
@@ -96,6 +98,7 @@ _September 2022 --- December 2026_
 )
 
 #job(
+  id: "ignite-freelance",
   title: "Freelance Software Developer",
   company: "IgNITE",
   location: "Remote",
@@ -105,6 +108,19 @@ _September 2022 --- December 2026_
     [Developed a curriculum for a *Python* programming course for 100+ students aged 8-12.],
     [Instructed students in Python programming, improving their problem-solving skills and computational thinking.],
   ),
+)
+
+#job(
+  id: "roboedu-instructor",
+	title: "STEM Instructor",
+	company: "RoboEDU",
+	location: "North York, ON",
+	start: datetime(year: 2022, month: 6, day: 1),
+	end: datetime(year: 2022, month: 08, day: 1),
+	achievements: (
+		[Developed a curriculum for a *Python* programming course for 100+ students aged 8-12.],
+		[Instructed students in Python programming, improving their problem-solving skills and computational thinking.],
+	)
 )
 
 #section(title: "Achievements")
