@@ -75,10 +75,11 @@ _September 2022 --- December 2026_
   location: "Ottawa, ON",
   start: datetime(year: 2025, month: 1, day: 6),
   achievements: (
-    [Wrote various JUnit, Cypress, and Jest tests, increasing test coverage across multiple projects.],
+    [Implemented *React* components for a customer-facing web application, following *Figma* designs.],
+    [Leveraged *Storybook* and *Cypress* for component testing and documentation, improving developer experience.],
     [Added rate-limiting to a customer-facing API with *Java* and *Spring Boot*.],
-    [Performed benchmarking and profiling on a messaging system, reducing memory and CPU usage by 60%.],
-    [Integrated OpenAPI tooling and an associated CI/CD pipeline, improving documentation by 15%.],
+    [Integrated *OpenAPI* tooling and an associated CI/CD pipeline, improving documentation by 15%.],
+    [Contributed to Scrum meetings, Story Definition meetings, and the migration to micro-frontends (*MFE*).],
   ),
 )
 
@@ -93,7 +94,6 @@ _September 2022 --- December 2026_
     [Created a code ownership and test management solution with *Express.js*, *MongoDB*, and *InfluxDB* (for logging) that improved workflow efficiency and test coverage by 80%, among other improvements.],
     [Released a full-stack computing resource booking platform with *Nuxt*, *PostgreSQL*, and *tRPC* that reduced order wait times by 99%+ (from days to minutes).],
     [Designed, implemented, and deployed a *Rust* microservice to categorize errors, improving MTTR by 30%.],
-    [Migrated a legacy codebase to Python 3.9, fixing numerous bugs and reducing maintenance time by 50%.],
   ),
 )
 
@@ -105,8 +105,8 @@ _September 2022 --- December 2026_
   start: datetime(year: 2024, month: 10, day: 1),
   end: datetime(year: 2025, month: 1, day: 1),
   achievements: (
-    [Developed a curriculum for a *Python* programming course for 100+ students aged 8-12.],
-    [Instructed students in Python programming, improving their problem-solving skills and computational thinking.],
+    [Developed a full-stack web application with *SvelteKit* and *Rust* for a medical case competition.],
+		[Implemented a booking system, dynamic workshop, and payment system with *Stripe*.]
   ),
 )
 
@@ -181,7 +181,7 @@ _September 2022 --- December 2026_
   achievements: (
     [Developed a *programming language* with a custom lexer, parser, and interpreter in *Rust*.],
     [Compiled the language to *WebAssembly* and integrated it into an interactive web-based layout.],
-    [Implemented clean error reporting and helpful diagnostics, improving developer experience significantly],
+    [Implemented clean error reporting and helpful diagnostics, improving developer experience significantly.],
   ),
 )
 
@@ -256,6 +256,8 @@ _September 2022 --- December 2026_
 
     *Tools*: PostgreSQL, MySQL, MongoDB, Redis, InfluxDB, TimescaleDB,
     Gerrit, Unity, Godot, Git, Ansible, AWS, GCP,
-    OpenStack, Docker, Prometheus, Grafana, OpenTelemetry, Telegraf
+    OpenStack, Docker, Prometheus, Grafana, OpenTelemetry, Telegraf,
+    Copilot,
+    Agile, Scrum, DevOps, CI/CD, TDD
   ],
 )
