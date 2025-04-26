@@ -20,7 +20,7 @@ jobs:
       - uses: typst-community/setup-typst@v4
         with:
           cache-dependency-path: requirements.typ
-      - run: typst compile resume.typ Matthew_Polak_Resume.pdf --pdf-standard a-2b
+      - run: typst compile resume.typ Matthew_Polak_Resume.pdf --pdf-standard 1.7
         env:
           TYPST_FONT_PATHS: ${{ github.workspace }}/fonts
       - uses: softprops/action-gh-release@v2

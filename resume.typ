@@ -11,7 +11,7 @@
 )
 
 // typography setup
-#set text(font: "open sans", weight: "regular", size: 10.5pt, hyphenate: true)
+#set text(font: "CMU Serif", weight: "regular", size: 10pt, ligatures: false, lang: "en")
 #set par(leading: 0.5em)
 #set list(indent: 1em, spacing: 0.65em, tight: false)
 
@@ -35,10 +35,10 @@
   #config.phone • #config.location \
   #link("mailto:" + config.email, config.email) •
   #link("https://" + config.website, config.website) •
-  #link("https://github.com/" + config.github, "github/" + config.github) •
+  #link("https://github.com/" + config.github, "github.com/" + config.github) •
   #link(
-    "https://linkedin.com/in/" + config.linkedin,
-    "linkedin/" + config.linkedin,
+    "https://www.linkedin.com/in/" + config.linkedin,
+    "linkedin.com/in/" + config.linkedin,
   )
 ]
 
@@ -125,7 +125,7 @@ _September 2022 --- December 2026_
 
 #section(title: "Achievements")
 - Open Source Contributor to #link("https://github.com/sveltejs/svelte", "Svelte"), #link("https://github.com/sveltejs/kit", "SvelteKit"), #link("https://github.com/lucia-auth/lucia", "Lucia"), #link("https://github.com/SoftbearStudios/bitcode", "Bitcode"), #link("https://github.com/plotters-rs/plotters", "Plotters"), #link("https://github.com/oven-sh/bun", "Bun")
-- 2025 #link("https://dorahacks.io/hackathon/uottahack7", "uOttaHack 7") Hackathon, *1st*
+- 2025 #link("https://dorahacks.io/hackathon/uottahack7", "uOttaHack 7") Hackathon, *1st*, 2024 NASA Space Apps Challenge, *1st* (Ottawa region)
 - 2024 #link("https://hack-the-hill-ii.devpost.com", "Hack the Hill II") Hackathon, *1st*, 2023 #link("https://hack-the-hill.devpost.com", "Hack the Hill") Hackathon,
   *1st*
 - 2023 #link("https://all-in-hackathon.devpost.com", "MLH x {all in}") Hackathon, *1st*, 2023 #link("https://maphacks-2.devpost.com", "MapHacks 2") Hackathon,

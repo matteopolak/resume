@@ -25,7 +25,10 @@
 
   stack(
     dir: ltr,
-    align(alignment.start, [*#title* \ #company]),
+    align(alignment.start, [
+      === #pad(top: 0pt, bottom: -4pt, title)
+      #company
+    ]),
     align(alignment.end, [#start.display(format) --- #end \ #emph(location)]),
   )
 
@@ -60,9 +63,10 @@
   }
 
   [
-    #link("https://github.com/" + github, title)
-    --
-    #tags.map(t => text(weight: "semibold", t)).join(", ")
+    === #pad(top: 0pt, bottom: -2pt, text([
+      #link("https://github.com/" + github, title)
+      --
+      #tags.map(t => text(weight: "semibold", t)).join(", ")], weight: "regular")) 
   ]
 
   space(h: 0.7em)
@@ -72,7 +76,7 @@
 // Create a section heading
 #let section(title: "", right: "") = {
   [
-    *#upper(title)*
+    == #pad(top: -5pt, bottom: -16pt, smallcaps(title))
     #h(1fr)
     #right
   ]
